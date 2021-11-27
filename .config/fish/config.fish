@@ -16,3 +16,8 @@ alias l="exa -lah"
 alias n="nvim"
 
 # neofetch
+
+set -gx EDITOR "nvim"
+set -gx VISUAL "nvim"
+# set -gx PAGER "bat"
+

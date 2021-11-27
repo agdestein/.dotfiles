@@ -10,7 +10,7 @@ font:
   normal:
     family: JuliaMono
     # family: FantasqueSansMono
-  size: 10
+  size: 11
 
 window:
   # Window dimensions (changes require restart)

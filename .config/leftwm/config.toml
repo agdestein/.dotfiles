@@ -5,7 +5,7 @@ tags = ["Kvam", "Folgefonna", "Eidfjord", "Odda", "Fele", "Voss", "Granvin", "Vi
 # tags = ["Алакритти", "Всемирная Паутина", "Навье-Стокс", "Статья", "Слек", "Сигнал", "7", "8", "9"] #, "Что", "то", "происходит"]
 layouts = ["MainAndVertStack", "MainAndHorizontalStack", "MainAndDeck", "GridHorizontal", "EvenHorizontal", "EvenVertical", "Fibonacci", "CenterMain", "CenterMainBalanced", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack"]
 layout_mode = "Workspace"
-scratchpad = []
+# scratchpad = []
 disable_current_tag_swap = true
 focus_behaviour = "ClickTo"
 focus_new_windows = true
@@ -32,6 +32,29 @@ workspaces = []
 # max_window_width = 0.7
 
 [[keybind]]
+command = "ToggleScratchPad"
+value = "Alacritty"
+modifier = ["modkey", "Shift"]
+key = "a"
+
+# Create a scratchpad for alacritty
+[[scratchpad]]
+name = "Alacritty" # This is the name which is referenced when calling (case-sensitive)
+value = "WINIT_X11_SCALE_FACTOR=1 alacritty" # The command to load the application if it isn't started
+# x, y, width, height are in pixels when an integer is inputted or a percentage when a float is inputted.
+# These values are relative to the size of the workspace, and will be restricted depending on the workspace size.
+x = 0.3
+y = 0.25
+height = 0.5
+width = 0.4
+
+[[keybind]]
+command = "Execute"
+value = "dmenu_run"
+modifier = ["modkey"]
+key = "p"
+
+[[keybind]]
 command = "Execute"
 value = "dmenu_run"
 modifier = ["modkey"]
@@ -45,6 +68,12 @@ key = "e"
 
 [[keybind]]
 command = "Execute"
+value = "xdotool key --clearmodifiers Super+6 && thunderbird"
+modifier = ["modkey", "Shift"]
+key = "t"
+
+[[keybind]]
+command = "Execute"
 value = "flameshot gui"
 # value = "scrot -s"
 modifier = ["modkey", "Shift"]
@@ -52,14 +81,14 @@ key = "i"
 
 [[keybind]]
 command = "Execute"
-value = "alacritty"
+value = "WINIT_X11_SCALE_FACTOR=1 alacritty"
 modifier = ["modkey", "Shift"]
 key = "Return"
 
 [[keybind]]
 command = "Execute"
 # value = "brave"
-value = "firefox"
+value = "xdotool key --clearmodifiers Super+2 && firefox"
 modifier = ["modkey", "Shift"]
 key = "b"
 
@@ -71,19 +100,15 @@ key = "f"
 
 [[keybind]]
 command = "Execute"
-value = "signal-desktop"
+value = "xdotool key --clearmodifiers Super+5 && slack"
 modifier = ["modkey", "Shift"]
 key = "s"
 
 [[keybind]]
-command = "CloseWindow"
+command = "Execute"
+value = "xdotool key --clearmodifiers Super+6 && signal-desktop"
 modifier = ["modkey", "Shift"]
-key = "q"
-
-[[keybind]]
-command = "SoftReload"
-modifier = ["modkey", "Shift"]
-key = "r"
+key = "g"
 
 [[keybind]]
 command = "Execute"
@@ -98,6 +123,16 @@ modifier = ["modkey", "Control"]
 key = "l"
 
 [[keybind]]
+command = "CloseWindow"
+modifier = ["modkey", "Shift"]
+key = "q"
+
+[[keybind]]
+command = "SoftReload"
+modifier = ["modkey", "Shift"]
+key = "r"
+
+[[keybind]]
 command = "MoveToLastWorkspace"
 modifier = ["modkey", "Shift"]
 key = "w"
@@ -106,6 +141,16 @@ key = "w"
 command = "SwapTags"
 modifier = ["modkey"]
 key = "w"
+
+[[keybind]]
+command = "MoveWindowToPreviousWorkspace"
+modifier = ["modkey", "Shift"]
+key = "h"
+
+[[keybind]]
+command = "MoveWindowToNextWorkspace"
+modifier = ["modkey", "Shift"]
+key = "l"
 
 [[keybind]]
 command = "MoveWindowUp"
@@ -153,44 +198,16 @@ modifier = ["modkey"]
 key = "h"
 
 [[keybind]]
-command = "MoveWindowUp"
-modifier = ["modkey", "Shift"]
-key = "Up"
-
-[[keybind]]
-command = "MoveWindowDown"
-modifier = ["modkey", "Shift"]
-key = "Down"
-
-[[keybind]]
-command = "FocusWindowUp"
+command = "IncreaseMainWidth"
+value = "5"
 modifier = ["modkey"]
-key = "Up"
+key = "a"
 
 [[keybind]]
-command = "FocusWindowDown"
+command = "DecreaseMainWidth"
+value = "5"
 modifier = ["modkey"]
-key = "Down"
-
-[[keybind]]
-command = "NextLayout"
-modifier = ["modkey", "Control"]
-key = "Up"
-
-[[keybind]]
-command = "PreviousLayout"
-modifier = ["modkey", "Control"]
-key = "Down"
-
-[[keybind]]
-command = "FocusWorkspaceNext"
-modifier = ["modkey"]
-key = "Right"
-
-[[keybind]]
-command = "FocusWorkspacePrevious"
-modifier = ["modkey"]
-key = "Left"
+key = "x"
 
 [[keybind]]
 command = "GotoTag"

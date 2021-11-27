@@ -27,6 +27,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'jpalardy/vim-slime', {'for': ['python', 'julia', 'matlab']}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mroavi/vim-julia-cell', {'for': 'julia'}
+Plug 'neoclide/coc-vimtex'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 set encoding=UTF-8
@@ -70,7 +73,6 @@ nmap <leader>gr <Plug>(coc-references)
 " nmap <C-P> :FZF<CR>
 " nmap <C-P> :GFiles<CR>
 nmap <C-P> :Files<CR>
-
 " Newlines
 " map <CR> o<ESC>
 " map <S-CR> O<ESC>
@@ -113,6 +115,7 @@ let g:default_julia_version = '1.7'
 " nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 " nnoremap <silent> <F1> :call LanguageClient_textDocument_rename()<CR>
 
+
 " Gruvbox color scheme
 set termguicolors
 let g:gruvbox_bold = '1'
@@ -123,3 +126,5 @@ colorscheme gruvbox
 
 " Enable transparency
 hi Normal guibg=NONE ctermbg=NONE
+
+let g:airline_theme = 'gruvbox'

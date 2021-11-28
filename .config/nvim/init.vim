@@ -16,7 +16,6 @@ Plug 'lervag/vimtex'
 Plug 'kdheepak/JuliaFormatter.vim'
 Plug 'chiel92/vim-autoformat'
 Plug 'preservim/NERDTree'
-" Plug 'hanschen/vim-ipython-cell', {'for': ['python', 'julia']}
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-unimpaired'
 Plug 'Xuyuanp/nerdtree-git-plugin'

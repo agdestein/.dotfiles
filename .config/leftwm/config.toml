@@ -87,8 +87,8 @@ key = "Return"
 
 [[keybind]]
 command = "Execute"
-# value = "brave"
-value = "xdotool key --clearmodifiers Super+2 && firefox"
+# value = "xdotool key --clearmodifiers Super+2 && firefox"
+value = "xdotool key --clearmodifiers Super+2 && brave"
 modifier = ["modkey", "Shift"]
 key = "b"
 
@@ -113,7 +113,7 @@ key = "g"
 [[keybind]]
 command = "Execute"
 value = "loginctl kill-session $XDG_SESSION_ID"
-modifier = ["modkey", "Shift"]
+modifier = ["modkey", "Control"]
 key = "x"
 
 [[keybind]]

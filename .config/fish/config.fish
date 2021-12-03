@@ -1,5 +1,9 @@
+# Commands to run in interactive sessions can go here
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    # New greeting
+    # neofetch
+    colorscript --random
+    # colorscript -e panes
 end
 
 set fish_greeting
@@ -10,12 +14,10 @@ bind -M insert \cf accept-autosuggestion
 zoxide init fish | source
 starship init fish | source
 
-alias julia="~/julia-1.7.0-rc3/bin/julia"
+alias matlab="env LD_PRELOAD=/usr/lib/libstdc++.so LD_LIBRARY_PATH=/usr/lib/xorg/modules/dri/ MESA_LOADER_DRIVER_OVERRIDE=i965 matlab"
 alias pluto="julia --project=~/.julia/environments/pluto -e 'using Pluto; Pluto.run()'"
 alias l="exa -lah"
 alias n="nvim"
-
-# neofetch
 
 set -gx EDITOR "nvim"
 set -gx VISUAL "nvim"

@@ -7,9 +7,7 @@ endif
 call plug#begin()
 Plug 'morhetz/gruvbox'
 Plug 'JuliaEditorSupport/julia-vim'
-" Plug 'neovim/nvim-lspconfig'
-" Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
-" Plug 'roxma/nvim-completion-manager'  " optional
+Plug 'neovim/nvim-lspconfig'
 Plug 'dag/vim-fish'
 Plug 'cespare/vim-toml'
 Plug 'lervag/vimtex'
@@ -20,6 +18,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-unimpaired'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'mjbrownie/swapit'
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
@@ -27,8 +26,11 @@ Plug 'jpalardy/vim-slime', {'for': ['python', 'julia', 'matlab']}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mroavi/vim-julia-cell', {'for': 'julia'}
 Plug 'neoclide/coc-vimtex'
+Plug 'fannheyward/coc-julia'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'jremmen/vim-ripgrep'
+Plug 'chrisbra/Colorizer'
 call plug#end()
 
 set encoding=UTF-8
@@ -39,6 +41,7 @@ set shiftwidth=4
 set tabstop=4
 set mouse=a
 set incsearch
+set hidden
 
 " System clipboard as default register
 set clipboard+=unnamedplus
@@ -67,6 +70,8 @@ map <F2> :NERDTreeFind<CR>
 map gn :NERDTreeToggle<CR>
 map gN :NERDTreeFind<CR>
 
+nmap <leader>b :Buffers<CR>  
+
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gr <Plug>(coc-references)
 " nmap <C-P> :FZF<CR>
@@ -77,43 +82,29 @@ nmap <C-P> :Files<CR>
 " map <S-CR> O<ESC>
 map o o<ESC>
 
+nnoremap <Space> <Nop>
+map <Space> <Leader>
+
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 " Julia
 let g:default_julia_version = '1.7'
-
-" Language server
-" let g:LanguageClient_autoStart = 1
-" let g:LanguageClient_serverCommands = {
-" \   'julia': ['~/julia-1.7.0-rc3/bin/julia', '--project=~/.julia/environments/language_server', '--startup-file=no', '--history-file=no', '-e', '
-" \       using LanguageServer;
-" \       using Pkg;
-" \       import StaticLint;
-" \       import SymbolServer;
-" \       env_path = dirname(Pkg.Types.Context().env.project_file);
-" \       
-" \       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, "");
-" \       server.runlinter = true;
-" \       run(server);
-" \   ']
-" \ }
+let g:julia_cell_delimit_cells_by = 'tags'
+nmap <leader>c :JuliaCellExecuteCell<CR>
+nmap <leader>x :JuliaCellExecuteCellJump<CR>
+nmap <leader>j :JuliaCellNextCell<CR>
+nmap <leader>k :JuliaCellPrevCell<CR>
 
 " lua << EOF
-" require'lspconfig'.julials.setup{
-"     on_new_config = function(new_config, _)
-"         local julia = vim.fn.expand("~/.julia/environments/nvim-lspconfig/bin/julia")
-"         if require'lspconfig'.util.path.is_file(julia) then
-"             new_config.cmd[1] = julia
-"         end
-"     end
-" }
-" :nmap K :lua vim.lsp.buf.hover() <CR>
-" nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-" nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-" nnoremap <silent> <F1> :call LanguageClient_textDocument_rename()<CR>
+" require'lspconfig'.julials.setup{}
+" EOF
 
+" :nmap K :lua vim.lsp.buf.hover() <CR>
+let g:airline_theme = 'gruvbox'
+" let g:airline_theme = 'base16_gruvbox_dark_medium'
+let g:airline#extensions#tabline#enabled = 1
 
 " Gruvbox color scheme
 set termguicolors
@@ -125,5 +116,3 @@ colorscheme gruvbox
 
 " Enable transparency
 hi Normal guibg=NONE ctermbg=NONE
-
-let g:airline_theme = 'gruvbox'

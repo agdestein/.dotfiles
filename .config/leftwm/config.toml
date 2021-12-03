@@ -50,13 +50,8 @@ width = 0.4
 
 [[keybind]]
 command = "Execute"
-value = "dmenu_run"
-modifier = ["modkey"]
-key = "p"
-
-[[keybind]]
-command = "Execute"
-value = "dmenu_run"
+# value = "dmenu_run"
+value = "~/.config/rofi/launchers/colorful/launcher.sh"
 modifier = ["modkey"]
 key = "p"
 
@@ -112,7 +107,8 @@ key = "g"
 
 [[keybind]]
 command = "Execute"
-value = "loginctl kill-session $XDG_SESSION_ID"
+# value = "loginctl kill-session $XDG_SESSION_ID"
+value = "~/.config/rofi/powermenu/powermenu.sh"
 modifier = ["modkey", "Control"]
 key = "x"
 

@@ -31,6 +31,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jremmen/vim-ripgrep'
 Plug 'chrisbra/Colorizer'
+
+Plug 'github/copilot.vim'
 call plug#end()
 
 set encoding=UTF-8
@@ -71,6 +73,8 @@ map gn :NERDTreeToggle<CR>
 map gN :NERDTreeFind<CR>
 
 nmap <leader>b :Buffers<CR>  
+nmap <leader>v :edit $MYVIMRC<CR>  
+nmap <leader>r :source $MYVIMRC<CR>  
 
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gr <Plug>(coc-references)

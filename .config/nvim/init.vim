@@ -26,14 +26,26 @@ Plug 'jpalardy/vim-slime', {'for': ['python', 'julia', 'matlab']}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mroavi/vim-julia-cell', {'for': 'julia'}
 Plug 'neoclide/coc-vimtex'
-Plug 'fannheyward/coc-julia'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jremmen/vim-ripgrep'
 Plug 'chrisbra/Colorizer'
-
+Plug 'chrisbra/Colorizer'
+Plug 'ap/vim-css-color'
 Plug 'github/copilot.vim'
 call plug#end()
+
+" Gruvbox color scheme
+set termguicolors
+let g:gruvbox_bold = '1'
+let g:gruvbox_italic = '1'
+let g:gruvbox_transparent_bg = '1'
+let g:gruvbox_contrast_dark = 'medium'
+colorscheme gruvbox
+
+" Enable transparency
+hi Normal guibg=NONE ctermbg=NONE
+hi NonText guibg=NONE ctermbg=NONE
 
 set encoding=UTF-8
 set expandtab
@@ -47,6 +59,9 @@ set hidden
 
 " System clipboard as default register
 set clipboard+=unnamedplus
+
+" Disable comment continuation
+:set formatoptions-=cro
 
 " VimTeX
 let g:vimtex_view_method = 'zathura'
@@ -93,6 +108,7 @@ map <Space> <Leader>
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 " Julia
 let g:default_julia_version = '1.7'
 let g:julia_cell_delimit_cells_by = 'tags'
@@ -100,6 +116,29 @@ nmap <leader>c :JuliaCellExecuteCell<CR>
 nmap <leader>x :JuliaCellExecuteCellJump<CR>
 nmap <leader>j :JuliaCellNextCell<CR>
 nmap <leader>k :JuliaCellPrevCell<CR>
+noremap <Leader>f :call julia#toggle_function_blockassign()<CR>
+
+hi! link Type                    GruvboxBlue
+hi! link juliaType               GruvboxBlue
+hi! link juliaSymbol             GruvboxGreen
+
+hi! link juliaFunction           GruvboxAquaBold
+hi! link juliaFunctionDefinition GruvboxAqua
+hi! link juliaFunctionCall       GruvboxAqua
+hi! link juliaMacro              GruvboxAquaBold
+
+hi! link juliaParDelim           GruvboxYellow
+hi! link juliaSemicolon          GruvboxYellow
+hi! link juliaColon              GruvboxYellow
+hi! link juliaComma	             GruvboxYellow
+
+hi! link Operator                GruvboxOrange
+" hi! link juliaOperator		     GruvboxOrange
+" hi! link juliaRangeOperator	     GruvboxOrange
+" hi! link juliaCTransOperator     GruvboxOrange
+" hi! link juliaTernaryOperator    GruvboxOrange
+" hi! link juliaTypeOperator	     GruvboxOrange
+" hi! link juliaDotted             GruvboxOrange
 
 " lua << EOF
 " require'lspconfig'.julials.setup{}
@@ -109,14 +148,4 @@ nmap <leader>k :JuliaCellPrevCell<CR>
 let g:airline_theme = 'gruvbox'
 " let g:airline_theme = 'base16_gruvbox_dark_medium'
 let g:airline#extensions#tabline#enabled = 1
-
-" Gruvbox color scheme
-set termguicolors
-let g:gruvbox_bold = '1'
-let g:gruvbox_italic = '1'
-let g:gruvbox_transparent_bg = '1'
-let g:gruvbox_contrast_dark = 'medium'
-colorscheme gruvbox
-
-" Enable transparency
-hi Normal guibg=NONE ctermbg=NONE
+let g:airline_powerline_fonts = 0

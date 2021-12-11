@@ -1,7 +1,7 @@
 modkey = "Mod4"
 mousekey = "Mod4"
-# tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-tags = ["Kvam", "Folgefonna", "Eidfjord", "Odda", "Fele", "Voss", "Granvin", "Vidda", "Skip"]
+tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+# tags = ["Kvam", "Folgefonna", "Eidfjord", "Odda", "Fele", "Voss", "Granvin", "Vidda", "Skip"]
 # tags = ["Алакритти", "Всемирная Паутина", "Навье-Стокс", "Статья", "Слек", "Сигнал", "7", "8", "9"] #, "Что", "то", "происходит"]
 layouts = ["MainAndVertStack", "MainAndHorizontalStack", "MainAndDeck", "GridHorizontal", "EvenHorizontal", "EvenVertical", "Fibonacci", "CenterMain", "CenterMainBalanced", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack"]
 layout_mode = "Workspace"
@@ -24,10 +24,10 @@ workspaces = []
 # height = 1440
 # width = 2560 
 
-# [[keybind]]
-# command = "ToggleFloating"
-# modifier = ["modkey", "Ctrl"]
-# key = "f"
+[[keybind]]
+command = "ToggleFloating"
+modifier = ["modkey", "Shift"]
+key = "space"
 
 # max_window_width = 0.7
 

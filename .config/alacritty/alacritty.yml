@@ -5,12 +5,11 @@ key_bindings:
   - { key: F11, action: ToggleFullscreen }
 
 background_opacity: 0.80
-
 font:
   normal:
     family: JuliaMono
     # family: FantasqueSansMono
-  size: 11
+  size: 12
 window:
   # Window dimensions (changes require restart)
   #
@@ -36,7 +35,6 @@ window:
     x: 2
     y: 2
 
-# Colors (Gruvbox dark)
 colors:
   # Default colors
   primary:

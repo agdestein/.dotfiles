@@ -1,0 +1,62 @@
+#!/usr/bin/env fish
+set theme (echo -e "gruvbox\ndracula\nmonokai" | rofi -dmenu -i)
+
+
+if test $theme = "gruvbox"
+    alacritty-themes Gruvbox-Dark
+    set color_bat "gruvbox-dark"
+    set doom_theme "doom-gruvbox"
+    set gtk_theme_name "gruvbox-dark-gtk"
+    set gtk_icon_theme_name "Gruvbox-Material-Dark"
+    set gtk_cursor_theme_name "Breeze"
+    set wallpaper "\/home\/syver\/Pictures\/wallpapers\/hardanger_crop.jpg"
+    # set vscode "Gruvbox Dark Medium"
+    set vscode "Gruvbox Material Dark"
+else if test $theme = "dracula"
+    alacritty-themes Dracula
+    sed -i 's/#000000/#282a36/g' ~/.config/alacritty/alacritty.yml
+    set color_bat "Dracula"
+    set doom_theme "doom-dracula"
+    set gtk_theme_name "Dracula"
+    set gtk_icon_theme_name "Dracula"
+    set gtk_cursor_theme_name "Breeze_Snow"
+    set wallpaper "\/home\/syver\/Pictures\/wallpapers\/dracula\/nordlys4.jpg"
+    set vscode "Dracula"
+else if test $theme = "monokai"
+    alacritty-themes Monokai.dark
+    # sed -i 's/#000000/#282a36/g' ~/.config/alacritty/alacritty.yml
+    set color_bat "Monokai Extended"
+    set doom_theme "doom-monokai-classic"
+    set gtk_theme_name "monokai-gtk"
+    set gtk_icon_theme_name "Dracula"
+    set gtk_cursor_theme_name "Breeze_Snow"
+    set wallpaper "\/home\/syver\/Pictures\/wallpapers\/moon\/buzz.jpg"
+    set vscode "Julia (Monokai Classic)"
+else
+    exit
+end
+
+ln -sf ~/.config/leftwm/themes/Hardanger/$theme.toml ~/.config/leftwm/themes/Hardanger/theme.toml
+ln -sf ~/.config/nvim/colorloaders/$theme.vim ~/.config/nvim/colorloaders/colors.vim
+ln -sf ~/.config/leftwm/themes/Hardanger/polybar/colors/$theme.ini ~/.config/leftwm/themes/Hardanger/polybar/colors/colors.ini
+ln -sf ~/.config/zathura/zathurarc-$theme ~/.config/zathura/zathurarc
+ln -sf ~/.config/dunst/dunstrc-$theme ~/.config/dunst/dunstrc
+# ln -sf ~/.config/vimb/$theme.css ~/.config/vimb/style.css
+sed -i 's/^(setq doom-theme \'.*/(setq doom-theme \''(echo $doom_theme)')/g' ~/.config/doom/config.el
+sed -i 's/^--theme=.*/--theme="'(echo $color_bat)'"/g' ~/.config/bat/config 
+sed -i 's/^gtk-theme-name=.*/gtk-theme-name='(echo $gtk_theme_name)'/g' ~/.config/gtk-3.0/settings.ini
+sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name='(echo $gtk_icon_theme_name)'/g' ~/.config/gtk-3.0/settings.ini
+sed -i 's/^gtk-cursor-theme-name=.*/gtk-cursor-theme-name='(echo $gtk_cursor_theme_name)'/g' ~/.config/gtk-3.0/settings.ini
+sed -i 's/^\@import.*/@import "'(echo $theme)'.rasi"/g' ~/.config/rofi/config.rasi
+sed -i 's/^$dir\/.*/$dir\/'(echo $theme)'.sh/g' ~/.config/rofi/launchers/colorful/launcher.sh
+sed -i -e 's/@import .*/@import "~\/.config\/rofi\/powermenu\/styles\/'(echo $theme)'.rasi"/g' ~/.config/rofi/powermenu/styles/colors.rasi
+sed -i 's/^file=.*/file='(echo $wallpaper)'/g' ~/.config/nitrogen/bg-saved.cfg
+sed -i 's/"workbench\.colorTheme": ".*",/"workbench\.colorTheme": "'(echo $vscode)'",/g' ~/.config/Code/User/settings.json
+
+if test $theme = "dracula"
+    watch -n 300 moon &
+else if test $theme = "monokai"
+    watch -n 300 moon &
+end
+
+leftwm-command "SoftReload"

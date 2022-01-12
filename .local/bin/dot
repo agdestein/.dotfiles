@@ -1,0 +1,59 @@
+#!/usr/bin/env fish
+
+set f (echo -e "alacritty\nbat\ndoom\ndot\ndunst\nfish\nhardanger\njulia_startup\njulia_v1.7\nleftwm\nnvim\npicom\npolybar\nranger\nrofi\nscreenlayout\nstarship\nvimb\nzathura" | rofi -dmenu -i)
+
+if test $f = "alacritty"
+    nvim ~/.config/alacritty/alacritty.yml
+else if test $f = "bat"
+    nvim ~/.config/bat/config
+else if test $f = "doom"
+    nvim ~/.config/doom/config.el
+else if test $f = "dot"
+    nvim ~/.local/bin/dot
+else if test $f = "dunst"
+    nvim ~/.config/dunst/dunstrc
+else if test $f = "fish"
+    nvim ~/.config/fish/config.fish
+else if test $f = "hardanger"
+    nvim ~/.local/bin/hardanger
+else if test $f = "julia_startup"
+    nvim ~/.julia/config/startup.jl
+else if test $f = "julia_v1.7"
+    nvim ~/.julia/environments/v1.7/Project.toml
+else if test $f = "leftwm"
+    nvim ~/.config/leftwm/config.toml
+else if test $f = "nvim"
+    nvim ~/.config/nvim/init.vim
+else if test $f = "picom"
+    nvim ~/.config/picom/picom.conf
+else if test $f = "polybar"
+    nvim ~/.config/leftwm/themes/Hardanger/polybar/config.ini
+else if test $f = "ranger"
+    nvim ~/.config/ranger/rc.conf
+else if test $f = "rofi"
+    nvim ~/.config/rofi/config.rasi
+else if test $f = "screenlayout"
+    nvim ~/.local/bin/screenlayout
+else if test $f = "starship"
+    nvim ~/.config/starship.toml
+else if test $f = "vimb"
+    nvim ~/.config/vimb/config
+else if test $f = "zathura"
+    nvim ~/.config/zathura/zathurarc
+end
+
+# alacritty
+# bat
+# doom
+# dot
+# dunst
+# fish
+# hardanger
+# leftwm
+# nvim
+# picom
+# polybar
+# ranger
+# rofi
+# starship
+# zathura

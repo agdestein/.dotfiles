@@ -1,0 +1,3 @@
+#/usr/bin/env fish
+
+feh --randomize --bg-fill ~/Pictures/wallpapers/moon/*   

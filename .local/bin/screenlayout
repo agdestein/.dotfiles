@@ -1,0 +1,7 @@
+#!/usr/bin/env fish
+
+set f (echo -e "adriaan\nlaptop\noffice_below\noffice_left\noffice_right\nring" | rofi -dmenu -i)
+
+if test $f
+    arandr ~/.screenlayout/$f.sh
+end

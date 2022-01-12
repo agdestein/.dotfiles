@@ -5,11 +5,13 @@ tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 # tags = ["Алакритти", "Всемирная Паутина", "Навье-Стокс", "Статья", "Слек", "Сигнал", "7", "8", "9"] #, "Что", "то", "происходит"]
 layouts = ["MainAndVertStack", "MainAndHorizontalStack", "MainAndDeck", "GridHorizontal", "EvenHorizontal", "EvenVertical", "Fibonacci", "CenterMain", "CenterMainBalanced", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack"]
 layout_mode = "Workspace"
+# layout_mode = "Tag"
 # scratchpad = []
-disable_current_tag_swap = true
-focus_behaviour = "ClickTo"
+disable_current_tag_swap = false
+# focus_behaviour = "ClickTo"
+focus_behaviour = "Sloppy"
 focus_new_windows = true
-
+# max_window_width = 0.7
 workspaces = []
 
 # [[workspaces]]
@@ -24,19 +26,6 @@ workspaces = []
 # height = 1440
 # width = 2560 
 
-[[keybind]]
-command = "ToggleFloating"
-modifier = ["modkey", "Shift"]
-key = "space"
-
-# max_window_width = 0.7
-
-[[keybind]]
-command = "ToggleScratchPad"
-value = "Alacritty"
-modifier = ["modkey", "Shift"]
-key = "a"
-
 # Create a scratchpad for alacritty
 [[scratchpad]]
 name = "Alacritty" # This is the name which is referenced when calling (case-sensitive)
@@ -47,6 +36,35 @@ x = 0.3
 y = 0.25
 height = 0.5
 width = 0.4
+
+[[keybind]]
+command = "ToggleScratchPad"
+value = "Alacritty"
+modifier = ["modkey", "Shift"]
+key = "a"
+
+[[keybind]]
+command = "Execute"
+value = "hardanger"
+modifier = ["modkey"]
+key = "r"
+
+[[keybind]]
+command = "Execute"
+value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e dot"
+modifier = ["modkey", "Shift"]
+key = "d"
+
+[[keybind]]
+command = "Execute"
+value = "screenlayout"
+modifier = ["modkey", "Shift"]
+key = "n"
+
+[[keybind]]
+command = "ToggleFloating"
+modifier = ["modkey", "Shift"]
+key = "space"
 
 [[keybind]]
 command = "Execute"
@@ -76,6 +94,13 @@ key = "i"
 
 [[keybind]]
 command = "Execute"
+value = "flameshot screen -c"
+# value = "scrot -s"
+modifier = []
+key = "Print"
+
+[[keybind]]
+command = "Execute"
 value = "WINIT_X11_SCALE_FACTOR=1 alacritty"
 modifier = ["modkey", "Shift"]
 key = "Return"
@@ -83,9 +108,16 @@ key = "Return"
 [[keybind]]
 command = "Execute"
 # value = "xdotool key --clearmodifiers Super+2 && firefox"
-value = "xdotool key --clearmodifiers Super+2 && brave"
+# value = "xdotool key --clearmodifiers Super+2 && brave"
+value = "brave"
 modifier = ["modkey", "Shift"]
 key = "b"
+
+[[keybind]]
+command = "Execute"
+value = "vimb"
+modifier = ["modkey", "Shift"]
+key = "v"
 
 [[keybind]]
 command = "Execute"
@@ -121,7 +153,7 @@ key = "l"
 [[keybind]]
 command = "CloseWindow"
 modifier = ["modkey", "Shift"]
-key = "q"
+key = "c"
 
 [[keybind]]
 command = "SoftReload"
@@ -312,3 +344,27 @@ command = "MoveToTag"
 value = "9"
 modifier = ["modkey", "Shift"]
 key = "9"
+
+# keybind = [
+#     { command = "GotoTag", value = "1", modifier = ["modkey"], key = "1" },
+#     { command = "GotoTag", value = "2", modifier = ["modkey"], key = "2" },
+#     { command = "GotoTag", value = "3", modifier = ["modkey"], key = "3" },
+#     { command = "GotoTag", value = "4", modifier = ["modkey"], key = "4" },
+#     { command = "GotoTag", value = "5", modifier = ["modkey"], key = "5" },
+#     { command = "GotoTag", value = "6", modifier = ["modkey"], key = "6" },
+#     { command = "GotoTag", value = "7", modifier = ["modkey"], key = "7" },
+#     { command = "GotoTag", value = "8", modifier = ["modkey"], key = "8" },
+#     { command = "GotoTag", value = "9", modifier = ["modkey"], key = "9" },
+# ]
+
+# keybind = [
+#     { command = "MoveToTag", value = "1", modifier = ["modkey", "Shift"], key = "1" },
+#     { command = "MoveToTag", value = "2", modifier = ["modkey", "Shift"], key = "2" },
+#     { command = "MoveToTag", value = "3", modifier = ["modkey", "Shift"], key = "3" },
+#     { command = "MoveToTag", value = "4", modifier = ["modkey", "Shift"], key = "4" },
+#     { command = "MoveToTag", value = "5", modifier = ["modkey", "Shift"], key = "5" },
+#     { command = "MoveToTag", value = "6", modifier = ["modkey", "Shift"], key = "6" },
+#     { command = "MoveToTag", value = "7", modifier = ["modkey", "Shift"], key = "7" },
+#     { command = "MoveToTag", value = "8", modifier = ["modkey", "Shift"], key = "8" },
+#     { command = "MoveToTag", value = "9", modifier = ["modkey", "Shift"], key = "9" },
+# ]

@@ -1,0 +1,80 @@
+*,div,pre,textarea,body,input,td,tr,p
+{
+  background-color: #282a36 !important;
+  background-image: none !important;
+  color: #f8f8f2 !important;
+
+}
+
+h1,h2,h3,h4
+{
+  background-color: #282a36  !important;
+  color: #bfbfbf !important;
+}
+
+a
+{
+  color: #ff79c6 !important;
+}
+
+a:hover,a:focus
+{
+  color: #50fa7b  !important;
+}
+
+a:visited
+{
+  color: #f1fa8c !important;
+}
+
+img
+{
+  opacity: .8;
+}
+
+img:hover
+{
+  opacity: 1;
+}
+
+._hintLabel
+{
+  text-transform: uppercase !important;
+  background-color: #fb4934 !important;
+  font-size: 1.0em !important;
+  color: #f8f8f2 !important;
+  opacity: 1.0 !important;
+}
+
+._hintElem._hintFocus
+{
+  color: #8ec07c !important;
+}
+
+._hintElem._hintFocus img
+{
+  opacity: 1;
+}
+
+
+!  # Normal colors
+!  normal:
+!    black: '#282a36'
+!    red: '#ff5555'
+!    green: '#50fa7b'
+!    yellow: '#f1fa8c'
+!    blue: '#caa9fa'
+!    magenta: '#ff79c6'
+!    cyan: '#8be9fd'
+!    white: '#bfbfbf'
+!
+!  # Bright colors
+!  bright:
+!    black: '#575b70'
+!    red: '#ff6e67'
+!    green: '#5af78e'
+!    yellow: '#f4f99d'
+!    blue: '#caa9fa'
+!    magenta: '#ff92d0'
+!    cyan: '#9aedfe'
+!    white: '#e6e6e6'

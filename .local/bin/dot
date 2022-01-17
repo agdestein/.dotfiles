@@ -23,7 +23,7 @@ else if test $f = "julia_v1.7"
 else if test $f = "leftwm"
     nvim ~/.config/leftwm/config.toml
 else if test $f = "nvim"
-    nvim ~/.config/nvim/init.vim
+    nvim ~/.config/nvim/init.lua
 else if test $f = "picom"
     nvim ~/.config/picom/picom.conf
 else if test $f = "polybar"

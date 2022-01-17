@@ -1,0 +1,50 @@
+*,div,pre,textarea,body,input,td,tr,p
+{
+  background-color: #282a36 !important;
+  /* background-image: none !important; */
+  /* color: #f8f8f2 !important; */
+
+}
+
+/* h1,h2,h3,h4 */
+/* { */
+/*   background-color: #282a36  !important; */
+/*   color: #bfbfbf !important; */
+/* } */
+
+a
+{
+  color: #ff79c6 !important;
+}
+
+a:hover,a:focus
+{
+  color: #ff79c6   !important;
+}
+
+a:visited
+{
+  color: #caa9fa !important;
+}
+
+!  # Normal colors
+!  normal:
+!    black: '#282a36'
+!    red: '#ff5555'
+!    green: '#50fa7b'
+!    yellow: '#f1fa8c'
+!    blue: '#caa9fa'
+!    magenta: '#ff79c6'
+!    cyan: '#8be9fd'
+!    white: '#bfbfbf'
+!
+!  # Bright colors
+!  bright:
+!    black: '#575b70'
+!    red: '#ff6e67'
+!    green: '#5af78e'
+!    yellow: '#f4f99d'
+!    blue: '#caa9fa'
+!    magenta: '#ff92d0'
+!    cyan: '#9aedfe'
+!    white: '#e6e6e6'

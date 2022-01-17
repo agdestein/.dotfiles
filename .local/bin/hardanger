@@ -1,7 +1,6 @@
 #!/usr/bin/env fish
 set theme (echo -e "gruvbox\ndracula\nmonokai" | rofi -dmenu -i)
 
-
 if test $theme = "gruvbox"
     alacritty-themes Gruvbox-Dark
     set color_bat "gruvbox-dark"
@@ -37,7 +36,7 @@ else
 end
 
 ln -sf ~/.config/leftwm/themes/Hardanger/$theme.toml ~/.config/leftwm/themes/Hardanger/theme.toml
-ln -sf ~/.config/nvim/colorloaders/$theme.vim ~/.config/nvim/colorloaders/colors.vim
+ln -sf ~/.config/nvim/colorloaders/$theme.lua ~/.config/nvim/colorloaders/colors.lua
 ln -sf ~/.config/leftwm/themes/Hardanger/polybar/colors/$theme.ini ~/.config/leftwm/themes/Hardanger/polybar/colors/colors.ini
 ln -sf ~/.config/zathura/zathurarc-$theme ~/.config/zathura/zathurarc
 ln -sf ~/.config/dunst/dunstrc-$theme ~/.config/dunst/dunstrc
@@ -52,11 +51,5 @@ sed -i 's/^$dir\/.*/$dir\/'(echo $theme)'.sh/g' ~/.config/rofi/launchers/colorfu
 sed -i -e 's/@import .*/@import "~\/.config\/rofi\/powermenu\/styles\/'(echo $theme)'.rasi"/g' ~/.config/rofi/powermenu/styles/colors.rasi
 sed -i 's/^file=.*/file='(echo $wallpaper)'/g' ~/.config/nitrogen/bg-saved.cfg
 sed -i 's/"workbench\.colorTheme": ".*",/"workbench\.colorTheme": "'(echo $vscode)'",/g' ~/.config/Code/User/settings.json
-
-if test $theme = "dracula"
-    watch -n 300 moon &
-else if test $theme = "monokai"
-    watch -n 300 moon &
-end
 
 leftwm-command "SoftReload"

@@ -1,19 +1,22 @@
 -- Make <CR> auto-select the first completion item and notify coc.nvim to
 -- format on enter, <cr> could be remapped by other vim plugin
-vim.cmd(
-	"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm(): '\\<C-g>u\\<CR>\\<c-r>=coc#on_enter()\\<CR>'"
+vim.api.nvim_set_keymap(
+	"i",
+	"<expr> <cr>",
+	[[pumvisible() ? coc#_select_confirm(): '<C-g>u<CR><c-r>=coc#on_enter()<CR>']],
+	{ silent = true, noremap = true }
 )
 
 -- Use `[g` and `]g` to navigate diagnostics
 -- Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-vim.cmd("nmap <silent> [g <Plug>(coc-diagnostic-prev)")
-vim.cmd("nmap <silent> ]g <Plug>(coc-diagnostic-next)")
+vim.api.nvim_set_keymap("n", "[g", "<Plug>(coc-diagnostic-prev)", { silent = true })
+vim.api.nvim_set_keymap("n", "]g", "<Plug>(coc-diagnostic-next)", { silent = true })
 
 -- GoTo code navigation.
-vim.cmd("nmap <silent> gd <Plug>(coc-definition)")
-vim.cmd("nmap <silent> gy <Plug>(coc-type-definition)")
-vim.cmd("nmap <silent> gi <Plug>(coc-implementation)")
-vim.cmd("nmap <silent> gr <Plug>(coc-references)")
+vim.api.nvim_set_keymap("n", "gd", "<Plug>(coc-definition)", { silent = true })
+vim.api.nvim_set_keymap("n", "gy", "<Plug>(coc-type-definition)", { silent = true })
+vim.api.nvim_set_keymap("n", "gi", "<Plug>(coc-implementation)", { silent = true })
+vim.api.nvim_set_keymap("n", "gr", "<Plug>(coc-references)", { silent = true })
 
 -- Use K to show documentation in preview window.
 vim.cmd([[
@@ -33,10 +36,10 @@ vim.cmd([[
 vim.cmd("autocmd CursorHold * silent call CocActionAsync('highlight')")
 
 -- Symbol renaming.
-vim.cmd("nmap <leader>rn <Plug>(coc-rename)")
+vim.api.nvim_set_keymap("n", "<leader>rn", "<Plug>(coc-rename)", {})
 
 -- Formatting selected code.
-vim.cmd("xmap <leader>f  <Plug>(coc-format-selected)")
-vim.cmd("nmap <leader>f  <Plug>(coc-format-selected)")
+vim.api.nvim_set_keymap("x", "<leader>f", "<Plug>(coc-format-selected)", {})
+vim.api.nvim_set_keymap("n", "<leader>f", "<Plug>(coc-format-selected)", {})
 
-vim.cmd("nmap <silent>gf :call CocAction('format')<CR>")
+vim.api.nvim_set_keymap("n", "gf", ":call CocAction('format')<CR>", { silent = true })

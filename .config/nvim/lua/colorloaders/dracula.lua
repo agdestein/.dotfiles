@@ -15,7 +15,6 @@ vim.cmd("hi EndOfBuffer guibg=NONE ctermbg=2")
 
 vim.g.airline_theme = "dracula"
 
-
 -- vim.cmd("highlight EndOfBuffer ctermfg=bg")
 
 -- vim.cmd("hi! link Type                    DraculaBlue")

@@ -3,368 +3,128 @@ mousekey = "Mod4"
 tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 # tags = ["Kvam", "Folgefonna", "Eidfjord", "Odda", "Fele", "Voss", "Granvin", "Vidda", "Skip"]
 # tags = ["Алакритти", "Всемирная Паутина", "Навье-Стокс", "Статья", "Слек", "Сигнал", "7", "8", "9"] #, "Что", "то", "происходит"]
-layouts = ["MainAndVertStack", "MainAndHorizontalStack", "MainAndDeck", "GridHorizontal", "EvenHorizontal", "EvenVertical", "Fibonacci", "CenterMain", "CenterMainBalanced", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack"]
-layout_mode = "Workspace"
-# layout_mode = "Tag"
-# scratchpad = []
+
+layouts = [
+    "MainAndVertStack",
+    "MainAndHorizontalStack",
+    "MainAndDeck",
+    "GridHorizontal",
+    "EvenHorizontal",
+    "EvenVertical",
+    "Fibonacci",
+    "CenterMain",
+    "CenterMainBalanced",
+    "Monocle",
+    "RightWiderLeftStack",
+    "LeftWiderRightStack",
+]
+
+layout_mode = "Tag"
 disable_current_tag_swap = false
-# focus_behaviour = "ClickTo"
 focus_behaviour = "Sloppy"
 focus_new_windows = true
 # max_window_width = 0.7
 workspaces = []
 
-# [[workspaces]]
-# y = 0
-# x = 0 
-# height = 1200
-# width = 1920
+window_rules = [
+    {window_class = "slack", spawn_on_tag = 5},
+    {window_class = "signal", spawn_on_tag = 6},
+]
 
-# [[workspaces]]
-# y = 0
-# x = 1920 
-# height = 1440
-# width = 2560 
+keybind = [
+    {command = "SoftReload", modifier = ["modkey", "Shift"], key = "r"},
+    {command = "HardReload", modifier = ["modkey", "Control", "Shift"], key = "r"},
+    {command = "SwapTags", modifier = ["modkey"], key = "w"},
+    {command = "FocusWorkspaceNext", modifier = ["modkey"], key = "l"},
+    {command = "FocusWorkspacePrevious", modifier = ["modkey"], key = "h"},
+    {command = "FocusWindowUp", modifier = ["modkey"], key = "k"},
+    {command = "FocusWindowDown", modifier = ["modkey"], key = "j"},
+    {command = "MoveWindowUp", modifier = ["modkey", "Shift"], key = "k"},
+    {command = "MoveWindowDown", modifier = ["modkey", "Shift"], key = "j"},
+    {command = "MoveWindowTop", modifier = ["modkey"], key = "Return"},
+    {command = "MoveToLastWorkspace", modifier = ["modkey", "Shift"], key = "w"},
+    {command = "MoveWindowToPreviousWorkspace", modifier = ["modkey", "Shift"], key = "h"},
+    {command = "MoveWindowToNextWorkspace", modifier = ["modkey", "Shift"], key = "l"},
+    {command = "GotoTag", value = "1", modifier = ["modkey"], key = "1"},
+    {command = "GotoTag", value = "2", modifier = ["modkey"], key = "2"},
+    {command = "GotoTag", value = "3", modifier = ["modkey"], key = "3"},
+    {command = "GotoTag", value = "4", modifier = ["modkey"], key = "4"},
+    {command = "GotoTag", value = "5", modifier = ["modkey"], key = "5"},
+    {command = "GotoTag", value = "6", modifier = ["modkey"], key = "6"},
+    {command = "GotoTag", value = "7", modifier = ["modkey"], key = "7"},
+    {command = "GotoTag", value = "8", modifier = ["modkey"], key = "8"},
+    {command = "GotoTag", value = "9", modifier = ["modkey"], key = "9"},
+    {command = "MoveToTag", value = "1", modifier = ["modkey", "Shift"], key = "1"},
+    {command = "MoveToTag", value = "2", modifier = ["modkey", "Shift"], key = "2"},
+    {command = "MoveToTag", value = "3", modifier = ["modkey", "Shift"], key = "3"},
+    {command = "MoveToTag", value = "4", modifier = ["modkey", "Shift"], key = "4"},
+    {command = "MoveToTag", value = "5", modifier = ["modkey", "Shift"], key = "5"},
+    {command = "MoveToTag", value = "6", modifier = ["modkey", "Shift"], key = "6"},
+    {command = "MoveToTag", value = "7", modifier = ["modkey", "Shift"], key = "7"},
+    {command = "MoveToTag", value = "8", modifier = ["modkey", "Shift"], key = "8"},
+    {command = "MoveToTag", value = "9", modifier = ["modkey", "Shift"], key = "9"},
+    {command = "IncreaseMainWidth", value = "5", modifier = ["modkey"], key = "x"},
+    {command = "DecreaseMainWidth", value = "5", modifier = ["modkey", "Shift"], key = "x"},
+    {command = "NextLayout", modifier = ["modkey", "Control"], key = "k"},
+    {command = "PreviousLayout", modifier = ["modkey", "Control"], key = "j"},
+    {command = "ToggleSticky", modifier = ["modkey"], key = "y"},
+    {command = "ToggleFloating", modifier = ["modkey", "Shift"], key = "space"},
+    {command = "CloseWindow", modifier = ["modkey", "Shift"], key = "c"},
+    {command = "ToggleScratchPad", value = "alacritty", modifier = ["modkey", "Shift"], key = "a"},
+    {command = "ToggleScratchPad", value = "htop", modifier = ["modkey"], key = "z"},
+    {command = "ToggleScratchPad", value = "bpytop", modifier = ["modkey"], key = "a"},
+    {command = "ToggleScratchPad", value = "bottom", modifier = ["modkey"], key = "q"},
+    {command = "Execute", value = "/home/syver/.local/bin/hardanger", modifier = ["modkey"], key = "r"},
+    {command = "Execute", value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e /home/syver/.local/bin/dot", modifier = ["modkey", "Shift"], key = "d"},
+    {command = "Execute", value = "/home/syver/.local/bin/screenlayout", modifier = ["modkey", "Shift"], key = "n"},
+    {command = "Execute", value = "~/.config/rofi/launchers/colorful/launcher.sh", modifier = ["modkey"], key = "p"},
+    {command = "Execute", value = "emacs", modifier = ["modkey", "Shift"], key = "e"},
+    {command = "Execute", value = "flameshot gui", modifier = ["modkey", "Shift"], key = "i"},
+    {command = "Execute", value = "flameshot screen -c", modifier = [], key = "Print"},
+    {command = "Execute", value = "WINIT_X11_SCALE_FACTOR=1 alacritty", modifier = ["modkey", "Shift"], key = "Return"},
+    {command = "Execute", value = "brave", modifier = ["modkey", "Shift"], key = "b"},
+    {command = "Execute", value = "vimb", modifier = ["modkey", "Shift"], key = "v"},
+    {command = "Execute", value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e ranger", modifier = ["modkey"], key = "f"},
+    {command = "Execute", value = "pcmanfm", modifier = ["modkey", "Shift"], key = "f"},
+    {command = "Execute", value = "slack", modifier = ["modkey", "Shift"], key = "s"},
+    {command = "Execute", value = "signal-desktop", modifier = ["modkey", "Shift"], key = "g"},
+    {command = "Execute", value = "~/.config/rofi/powermenu/powermenu.sh", modifier = ["modkey", "Control"], key = "o"},
+    # {command = "Execute", value = "slock", modifier = ["modkey", "Control"], key = "l"},
+    {command = "Execute", value = "light-locker-command -l", modifier = ["modkey", "Control"], key = "l"},
+    {command = "Execute", value = "dunstctl close", modifier = ["modkey"], key = "comma"},
+    {command = "Execute", value = "dunstctl close-all", modifier = ["modkey", "Shift"], key = "comma"},
+    {command = "Execute", value = "dunstctl history-pop", modifier = ["modkey"], key = "period"},
+    {command = "Execute", value = "dunstctl context", modifier = ["modkey", "Shift"], key = "period"},
+]
 
-# Create a scratchpad for alacritty
 [[scratchpad]]
-name = "Alacritty" # This is the name which is referenced when calling (case-sensitive)
-value = "WINIT_X11_SCALE_FACTOR=1 alacritty" # The command to load the application if it isn't started
-# x, y, width, height are in pixels when an integer is inputted or a percentage when a float is inputted.
-# These values are relative to the size of the workspace, and will be restricted depending on the workspace size.
+name = "alacritty"
+value = "WINIT_X11_SCALE_FACTOR=1 alacritty"
 x = 0.3
 y = 0.25
 height = 0.5
 width = 0.4
 
-[[keybind]]
-command = "ToggleScratchPad"
-value = "Alacritty"
-modifier = ["modkey", "Shift"]
-key = "a"
+[[scratchpad]]
+name = "htop"
+value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e htop"
+x = 0.2
+y = 0.15
+height = 0.7
+width = 0.6
 
-[[keybind]]
-command = "Execute"
-value = "hardanger"
-modifier = ["modkey"]
-key = "r"
+[[scratchpad]]
+name = "bpytop"
+value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e bpytop"
+x = 0.2
+y = 0.15
+height = 0.7
+width = 0.6
 
-[[keybind]]
-command = "Execute"
-value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e dot"
-modifier = ["modkey", "Shift"]
-key = "d"
-
-[[keybind]]
-command = "Execute"
-value = "screenlayout"
-modifier = ["modkey", "Shift"]
-key = "n"
-
-[[keybind]]
-command = "ToggleFloating"
-modifier = ["modkey", "Shift"]
-key = "space"
-
-[[keybind]]
-command = "Execute"
-# value = "dmenu_run"
-value = "~/.config/rofi/launchers/colorful/launcher.sh"
-modifier = ["modkey"]
-key = "p"
-
-[[keybind]]
-command = "Execute"
-value = "emacs"
-modifier = ["modkey", "Shift"]
-key = "e"
-
-[[keybind]]
-command = "Execute"
-value = "xdotool key --clearmodifiers Super+6 && thunderbird"
-modifier = ["modkey", "Shift"]
-key = "t"
-
-[[keybind]]
-command = "Execute"
-value = "flameshot gui"
-# value = "scrot -s"
-modifier = ["modkey", "Shift"]
-key = "i"
-
-[[keybind]]
-command = "Execute"
-value = "flameshot screen -c"
-# value = "scrot -s"
-modifier = []
-key = "Print"
-
-[[keybind]]
-command = "Execute"
-value = "WINIT_X11_SCALE_FACTOR=1 alacritty"
-modifier = ["modkey", "Shift"]
-key = "Return"
-
-[[keybind]]
-command = "Execute"
-# value = "xdotool key --clearmodifiers Super+2 && firefox"
-# value = "xdotool key --clearmodifiers Super+2 && brave"
-value = "brave"
-modifier = ["modkey", "Shift"]
-key = "b"
-
-[[keybind]]
-command = "Execute"
-value = "vimb"
-modifier = ["modkey", "Shift"]
-key = "v"
-
-[[keybind]]
-command = "Execute"
-value = "pcmanfm"
-modifier = ["modkey", "Shift"]
-key = "f"
-
-[[keybind]]
-command = "Execute"
-value = "xdotool key --clearmodifiers Super+5 && slack"
-modifier = ["modkey", "Shift"]
-key = "s"
-
-[[keybind]]
-command = "Execute"
-value = "xdotool key --clearmodifiers Super+6 && signal-desktop"
-modifier = ["modkey", "Shift"]
-key = "g"
-
-[[keybind]]
-command = "Execute"
-# value = "loginctl kill-session $XDG_SESSION_ID"
-value = "~/.config/rofi/powermenu/powermenu.sh"
-modifier = ["modkey", "Control"]
-key = "x"
-
-[[keybind]]
-command = "Execute"
-value = "slock"
-modifier = ["modkey", "Control"]
-key = "l"
-
-[[keybind]]
-command = "CloseWindow"
-modifier = ["modkey", "Shift"]
-key = "c"
-
-[[keybind]]
-command = "SoftReload"
-modifier = ["modkey", "Shift"]
-key = "r"
-
-[[keybind]]
-command = "MoveToLastWorkspace"
-modifier = ["modkey", "Shift"]
-key = "w"
-
-[[keybind]]
-command = "SwapTags"
-modifier = ["modkey"]
-key = "w"
-
-[[keybind]]
-command = "MoveWindowToPreviousWorkspace"
-modifier = ["modkey", "Shift"]
-key = "h"
-
-[[keybind]]
-command = "MoveWindowToNextWorkspace"
-modifier = ["modkey", "Shift"]
-key = "l"
-
-[[keybind]]
-command = "MoveWindowUp"
-modifier = ["modkey", "Shift"]
-key = "k"
-
-[[keybind]]
-command = "MoveWindowDown"
-modifier = ["modkey", "Shift"]
-key = "j"
-
-[[keybind]]
-command = "MoveWindowTop"
-modifier = ["modkey"]
-key = "Return"
-
-[[keybind]]
-command = "FocusWindowUp"
-modifier = ["modkey"]
-key = "k"
-
-[[keybind]]
-command = "FocusWindowDown"
-modifier = ["modkey"]
-key = "j"
-
-[[keybind]]
-command = "NextLayout"
-modifier = ["modkey", "Control"]
-key = "k"
-
-[[keybind]]
-command = "PreviousLayout"
-modifier = ["modkey", "Control"]
-key = "j"
-
-[[keybind]]
-command = "FocusWorkspaceNext"
-modifier = ["modkey"]
-key = "l"
-
-[[keybind]]
-command = "FocusWorkspacePrevious"
-modifier = ["modkey"]
-key = "h"
-
-[[keybind]]
-command = "IncreaseMainWidth"
-value = "5"
-modifier = ["modkey"]
-key = "a"
-
-[[keybind]]
-command = "DecreaseMainWidth"
-value = "5"
-modifier = ["modkey"]
-key = "x"
-
-[[keybind]]
-command = "GotoTag"
-value = "1"
-modifier = ["modkey"]
-key = "1"
-
-[[keybind]]
-command = "GotoTag"
-value = "2"
-modifier = ["modkey"]
-key = "2"
-
-[[keybind]]
-command = "GotoTag"
-value = "3"
-modifier = ["modkey"]
-key = "3"
-
-[[keybind]]
-command = "GotoTag"
-value = "4"
-modifier = ["modkey"]
-key = "4"
-
-[[keybind]]
-command = "GotoTag"
-value = "5"
-modifier = ["modkey"]
-key = "5"
-
-[[keybind]]
-command = "GotoTag"
-value = "6"
-modifier = ["modkey"]
-key = "6"
-
-[[keybind]]
-command = "GotoTag"
-value = "7"
-modifier = ["modkey"]
-key = "7"
-
-[[keybind]]
-command = "GotoTag"
-value = "8"
-modifier = ["modkey"]
-key = "8"
-
-[[keybind]]
-command = "GotoTag"
-value = "9"
-modifier = ["modkey"]
-key = "9"
-
-[[keybind]]
-command = "MoveToTag"
-value = "1"
-modifier = ["modkey", "Shift"]
-key = "1"
-
-[[keybind]]
-command = "MoveToTag"
-value = "2"
-modifier = ["modkey", "Shift"]
-key = "2"
-
-[[keybind]]
-command = "MoveToTag"
-value = "3"
-modifier = ["modkey", "Shift"]
-key = "3"
-
-[[keybind]]
-command = "MoveToTag"
-value = "4"
-modifier = ["modkey", "Shift"]
-key = "4"
-
-[[keybind]]
-command = "MoveToTag"
-value = "5"
-modifier = ["modkey", "Shift"]
-key = "5"
-
-[[keybind]]
-command = "MoveToTag"
-value = "6"
-modifier = ["modkey", "Shift"]
-key = "6"
-
-[[keybind]]
-command = "MoveToTag"
-value = "7"
-modifier = ["modkey", "Shift"]
-key = "7"
-
-[[keybind]]
-command = "MoveToTag"
-value = "8"
-modifier = ["modkey", "Shift"]
-key = "8"
-
-[[keybind]]
-command = "MoveToTag"
-value = "9"
-modifier = ["modkey", "Shift"]
-key = "9"
-
-# keybind = [
-#     { command = "GotoTag", value = "1", modifier = ["modkey"], key = "1" },
-#     { command = "GotoTag", value = "2", modifier = ["modkey"], key = "2" },
-#     { command = "GotoTag", value = "3", modifier = ["modkey"], key = "3" },
-#     { command = "GotoTag", value = "4", modifier = ["modkey"], key = "4" },
-#     { command = "GotoTag", value = "5", modifier = ["modkey"], key = "5" },
-#     { command = "GotoTag", value = "6", modifier = ["modkey"], key = "6" },
-#     { command = "GotoTag", value = "7", modifier = ["modkey"], key = "7" },
-#     { command = "GotoTag", value = "8", modifier = ["modkey"], key = "8" },
-#     { command = "GotoTag", value = "9", modifier = ["modkey"], key = "9" },
-# ]
-
-# keybind = [
-#     { command = "MoveToTag", value = "1", modifier = ["modkey", "Shift"], key = "1" },
-#     { command = "MoveToTag", value = "2", modifier = ["modkey", "Shift"], key = "2" },
-#     { command = "MoveToTag", value = "3", modifier = ["modkey", "Shift"], key = "3" },
-#     { command = "MoveToTag", value = "4", modifier = ["modkey", "Shift"], key = "4" },
-#     { command = "MoveToTag", value = "5", modifier = ["modkey", "Shift"], key = "5" },
-#     { command = "MoveToTag", value = "6", modifier = ["modkey", "Shift"], key = "6" },
-#     { command = "MoveToTag", value = "7", modifier = ["modkey", "Shift"], key = "7" },
-#     { command = "MoveToTag", value = "8", modifier = ["modkey", "Shift"], key = "8" },
-#     { command = "MoveToTag", value = "9", modifier = ["modkey", "Shift"], key = "9" },
-# ]
+[[scratchpad]]
+name = "bottom"
+value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e btm"
+x = 0.2
+y = 0.15
+height = 0.7
+width = 0.6

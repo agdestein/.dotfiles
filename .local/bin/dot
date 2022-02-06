@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-set f (echo -e "alacritty\nbat\ndoom\ndot\ndunst\nfish\nhardanger\njulia_startup\njulia_v1.7\nleftwm\nnvim\npicom\npolybar\nranger\nrofi\nscreenlayout\nstarship\nvimb\nzathura" | rofi -dmenu -i)
+set f (echo -e "alacritty\nbat\ndoom\ndot\ndunst\nfish\nhardanger\njulia_startup\njulia_v1.7\nleftwm\nnvim\npicom\npolybar\nranger\nrofi\nscreenlayout\nstarship\ntmux\nvimb\nzathura" | rofi -dmenu -i)
 
 if test $f = "alacritty"
     nvim ~/.config/alacritty/alacritty.yml
@@ -36,6 +36,8 @@ else if test $f = "screenlayout"
     nvim ~/.local/bin/screenlayout
 else if test $f = "starship"
     nvim ~/.config/starship.toml
+else if test $f = "tmux"
+    nvim ~/.config/tmux/tmux.conf
 else if test $f = "vimb"
     nvim ~/.config/vimb/config
 else if test $f = "zathura"

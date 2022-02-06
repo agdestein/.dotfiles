@@ -3,38 +3,35 @@ env:
 
 key_bindings:
   - { key: F11, action: ToggleFullscreen }
+  - { key: Return, mods: Shift, chars: "\e[13;2u" }
+  - { key: Return, mods: Control, chars: "\e[13;5u" }
 
-background_opacity: 0.80
 font:
   normal:
     family: JuliaMono
     # family: FantasqueSansMono
+    # family: FiraCode
+    # family: FuraCode Nerd Font # Mono
   size: 12
+
 window:
-  # Window dimensions (changes require restart)
-  #
-  # Number of lines/columns (not pixels) in the terminal. The number of columns
-  # must be at least `2`, while using a value of `0` for columns and lines will
-  # fall back to the window manager's recommended size.
+  opacity: 0.80
+
+  # Number of lines/columns (Use 0 for automatic) (changes require restart)
   dimensions:
     columns: 100
     lines: 40
 
-  # Window position (changes require restart)
-  #
-  # Specified in number of pixels.
-  # If the position is not set, the window manager will handle the placement.
-  #position:
-  #  x: 0
-  #  y: 0
-  # Window padding (changes require restart)
-  #
-  # Blank space added around the window in pixels. This padding is scaled
-  # by DPI and the specified value is always added at both opposing sides.
+  # # Window position (pixels) (changes require restart)
+  # position:
+  #     x: 0
+  #     y: 0
+  # Window padding (scaled by DPI) (changes require restart)
   padding:
     x: 2
     y: 2
 
+# Colors (automatically generated)
 colors:
   # Default colors
   primary:

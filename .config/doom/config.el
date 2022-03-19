@@ -28,7 +28,7 @@
 ;; (setq doom-theme 'doom-one)
 ;; (setq doom-theme 'doom-city-lights)
 (setq doom-theme 'doom-gruvbox)
-(defconst doom-frame-transparency 80)
+(defconst doom-frame-transparency 100)
 (set-frame-parameter (selected-frame) 'alpha doom-frame-transparency)
 
 ;; If you use `org' and don't want your org files in the default location below,

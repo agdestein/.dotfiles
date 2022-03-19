@@ -50,10 +50,6 @@
 # "xterm"
 #   control + b:2
 
-# Choose keyboard layout
-"~/keyboardmenu.sh" 
-  mod4 + space
-
 # Increase volume
 "pactl set-sink-volume @DEFAULT_SINK@ +1000"
    XF86AudioRaiseVolume
@@ -71,11 +67,11 @@
    XF86AudioMicMute
 
 # Increase backlight
-"xbacklight -inc 5"
+"xbacklight -inc 2"
    XF86MonBrightnessUp
 
 # Increase backlight
-"xbacklight -dec 5"
+"xbacklight -dec 2"
    XF86MonBrightnessDown
 
 #"xterm -geom 50x20+20+20"

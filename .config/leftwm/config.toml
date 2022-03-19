@@ -29,6 +29,8 @@ workspaces = []
 window_rules = [
     {window_class = "slack", spawn_on_tag = 5},
     {window_class = "signal", spawn_on_tag = 6},
+    # {window_class = "Makie", focus = false, spawn_floating = true},
+    # {window_class = "gksqt", spawn_floating = true},
 ]
 
 keybind = [
@@ -74,20 +76,26 @@ keybind = [
     {command = "ToggleScratchPad", value = "htop", modifier = ["modkey"], key = "z"},
     {command = "ToggleScratchPad", value = "bpytop", modifier = ["modkey"], key = "a"},
     {command = "ToggleScratchPad", value = "bottom", modifier = ["modkey"], key = "q"},
+    {command = "ToggleScratchPad", value = "btop", modifier = ["modkey"], key = "s"},
     {command = "Execute", value = "/home/syver/.local/bin/hardanger", modifier = ["modkey"], key = "r"},
     {command = "Execute", value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e /home/syver/.local/bin/dot", modifier = ["modkey", "Shift"], key = "d"},
     {command = "Execute", value = "/home/syver/.local/bin/screenlayout", modifier = ["modkey", "Shift"], key = "n"},
+    {command = "Execute", value = "/home/syver/.local/bin/keyboardmenu", modifier = ["modkey"], key = "0"},
     {command = "Execute", value = "~/.config/rofi/launchers/colorful/launcher.sh", modifier = ["modkey"], key = "p"},
     {command = "Execute", value = "emacs", modifier = ["modkey", "Shift"], key = "e"},
     {command = "Execute", value = "flameshot gui", modifier = ["modkey", "Shift"], key = "i"},
     {command = "Execute", value = "flameshot screen -c", modifier = [], key = "Print"},
     {command = "Execute", value = "WINIT_X11_SCALE_FACTOR=1 alacritty", modifier = ["modkey", "Shift"], key = "Return"},
+    {command = "Execute", value = "kitty", modifier = ["modkey", "Control", "Shift"], key = "Return"},
     {command = "Execute", value = "brave", modifier = ["modkey", "Shift"], key = "b"},
+    {command = "Execute", value = "firefox", modifier = ["modkey", "Control", "Shift"], key = "f"},
     {command = "Execute", value = "vimb", modifier = ["modkey", "Shift"], key = "v"},
+    {command = "Execute", value = "luakit", modifier = ["modkey", "Shift"], key = "u"},
     {command = "Execute", value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e ranger", modifier = ["modkey"], key = "f"},
     {command = "Execute", value = "pcmanfm", modifier = ["modkey", "Shift"], key = "f"},
     {command = "Execute", value = "slack", modifier = ["modkey", "Shift"], key = "s"},
     {command = "Execute", value = "signal-desktop", modifier = ["modkey", "Shift"], key = "g"},
+    {command = "Execute", value = "rofi -show emoji -modi emoji", modifier = ["modkey", "Control", "Shift"], key = "e"},
     {command = "Execute", value = "~/.config/rofi/powermenu/powermenu.sh", modifier = ["modkey", "Control"], key = "o"},
     # {command = "Execute", value = "slock", modifier = ["modkey", "Control"], key = "l"},
     {command = "Execute", value = "light-locker-command -l", modifier = ["modkey", "Control"], key = "l"},
@@ -124,6 +132,14 @@ width = 0.6
 [[scratchpad]]
 name = "bottom"
 value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e btm"
+x = 0.2
+y = 0.15
+height = 0.7
+width = 0.6
+
+[[scratchpad]]
+name = "btop"
+value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e btop"
 x = 0.2
 y = 0.15
 height = 0.7

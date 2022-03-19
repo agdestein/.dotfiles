@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-set f (echo -e "alacritty\nbat\ndoom\ndot\ndunst\nfish\nhardanger\njulia_startup\njulia_v1.7\nleftwm\nnvim\npicom\npolybar\nranger\nrofi\nscreenlayout\nstarship\ntmux\nvimb\nzathura" | rofi -dmenu -i)
+set f (echo -e "alacritty\nbat\ndoom\ndot\ndunst\nfish\nhardanger\njulia_startup\njulia_v1.7\nkitty\nleftwm\nnvim\npicom\npolybar\nranger\nrofi\nscreenlayout\nstarship\ntmux\nvimb\nzathura" | rofi -dmenu -i)
 
 if test $f = "alacritty"
     nvim ~/.config/alacritty/alacritty.yml
@@ -20,6 +20,8 @@ else if test $f = "julia_startup"
     nvim ~/.julia/config/startup.jl
 else if test $f = "julia_v1.7"
     nvim ~/.julia/environments/v1.7/Project.toml
+else if test $f = "kitty"
+    nvim ~/.config/kitty/kitty.conf
 else if test $f = "leftwm"
     nvim ~/.config/leftwm/config.toml
 else if test $f = "nvim"

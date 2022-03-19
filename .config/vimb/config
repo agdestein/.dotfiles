@@ -10,7 +10,7 @@ set smooth-scrolling=on
 set incsearch=true
 set monospace-font=JuliaMono
 # set monospace-font-size=13
-set dark-mode=on
+set dark-mode=off
 
 # # SSL
 # set strict-ssl=false
@@ -28,8 +28,9 @@ set editor-command=smallacritty -e nvim %s
 # aug end
 
 nnoremap <C-e> :e! simplyread();<CR>
-nnoremap <C-t> :set stylesheet!<CR>
-nnoremap <F11> :set fullscreen!<CR>
+nnoremap <C-t> :set stylesheet!<CR><Esc>
+nnoremap <F11> :set fullscreen!<CR><Esc>
+nnoremap <C-l> :source ~/.config/vimb/config<CR>
 
 # If enabled the inputbox will be hidden whenever it contains no text.
 set input-autohide=true
@@ -50,19 +51,22 @@ set incsearch=true
 # The font family to use as the default for content that does not specify a
 # font.
 # set default-font=DejaVu Sans
-set default-font=Latin Modern Roman
+set default-font=Noto Sans
+# set default-font=Latin Modern Roman
 
 # The font family used as the default for content using monospace font.
 set monospace-font=JuliaMono
 
 # The font family used as the default for content using sans-serif font.
 # set sans-serif-font=DejaVu Sans
-set sans-serif-font=Latin Modern Sans
+set sans-serif-font=Noto Sans
+# set sans-serif-font=Latin Modern Sans
 # set sans-serif-font=Cantarell
 
 # The font family used as the default for content using serif font.
 # set serif-font=DejaVu Serif
-set serif-font=Latin Modern Roman
+set serif-font=Noto Serif
+# set serif-font=Latin Modern Roman
 
 # The default font size used to display text.
 set font-size=16
@@ -88,9 +92,10 @@ shortcut-add dl=https://duckduckgo.com/lite/?q=$0
 shortcut-add w=https://en.wikipedia.org/w/index.php?search=$0
 shortcut-add aw=https://wiki.archlinux.org/index.php/search=$0
 shortcut-add d=http://dict.cc/?s=$0
+shortcut-add lar=https://www.larousse.fr/dictionnaires/francais/$0
 shortcut-add g=https://encrypted.google.com/search?q=$0
 shortcut-add y=http://www.youtube.com/results?search_query=$0
-shortcut-add gh=https://github.com/$0/$1
+shortcut-add gh=https://github.com/$0
 shortcut-add map=https://maps.google.com/maps?saddr=$0&daddr=$1 # :open map "city hall, London" railway station, London
 shortcut-add zim=https://zwebmail.cwi.nl/zimbra/#1
 shortcut-add lem=https://www.lemonde.fr/
@@ -100,24 +105,14 @@ shortcut-add vimb=https://fanglingsu.github.io/vimb/man.html
 # shortcut is given and the string to open is not an URI.
 shortcut-default duck
 
-# GUI color settings (Dracula)
-# Color scheme: Base16 Eighties (https://github.com/chriskempson/base16)
-set completion-css=color:#f8f8f2; background-color:#282a36; font:12pt JuliaMono;
-set completion-hover-css=color:#f8f8f2; background-color:#282a36; font:12pt JuliaMono;
-set completion-selected-css=color:#f8f8f2; background-color:#575b70; font:12pt JuliaMono;
-set input-css=color:#f8f8f2; background-color:#282a36; font:12pt JuliaMono;
-set input-error-css=color:#ff5555; background-color:#282a36; font:12pt JuliaMono;
-set status-css=color:#f1fa8c; background-color:#282a36; font:12pt JuliaMono;
-set status-ssl-css=color:#caa9fa; background-color:#282a36; font:12pt JuliaMono;
-set status-ssl-invalid-css=color:#ff79c6; background-color:#282a36; font:12pt JuliaMono;
-
-# # GUI color settings (Monokai)
-# # Color scheme: Base16 Eighties (https://github.com/chriskempson/base16)
-# set completion-css=color:#f8f8f2; background-color:#272822; font:12pt JuliaMono;
-# set completion-hover-css=color:#f8f8f2; background-color:#272822; font:12pt JuliaMono;
-# set completion-selected-css=color:#f9f8f5; background-color:#75715e; font:12pt JuliaMono;
-# set input-css=color:#f8f8f2; background-color:#272822; font:12pt JuliaMono;
-# set input-error-css=color:#f92672; background-color:#272822; font:12pt JuliaMono;
-# set status-css=color:#f4bf75; background-color:#272822; font:12pt JuliaMono;
-# set status-ssl-css=color:#a6e22e; background-color:#272822; font:12pt JuliaMono;
-# set status-ssl-invalid-css=color:#f92672; background-color:#272822; font:12pt JuliaMono;
+## BEGIN THEME
+# Gruvbox
+set completion-css=color:#ebdbb2; background-color:#282828; font:12pt JuliaMono;
+set completion-hover-css=color:#ebdbb2; background-color:#282828; font:12pt JuliaMono;
+set completion-selected-css=color:#ebdbb2; background-color:#928374; font:12pt JuliaMono;
+set input-css=color:#ebdbb2; background-color:#282828; font:12pt JuliaMono;
+set input-error-css=color:#cc241d; background-color:#282828; font:12pt JuliaMono;
+set status-css=color:#d79921; background-color:#282828; font:12pt JuliaMono;
+set status-ssl-css=color:#b8bb26; background-color:#282828; font:12pt JuliaMono;
+set status-ssl-invalid-css=color:#b16286; background-color:#282828; font:12pt JuliaMono;
+## END THEME

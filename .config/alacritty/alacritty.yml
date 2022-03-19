@@ -11,25 +11,28 @@ font:
     family: JuliaMono
     # family: FantasqueSansMono
     # family: FiraCode
+    # family: FiraCode Nerd Font Mono
     # family: FuraCode Nerd Font # Mono
-  size: 12
+  size: 13
 
 window:
-  opacity: 0.80
-
-  # Number of lines/columns (Use 0 for automatic) (changes require restart)
+  # opacity: 0.80
+  # Number of lines/columns (Use 0 for automatic)
   dimensions:
     columns: 100
     lines: 40
 
-  # # Window position (pixels) (changes require restart)
+  # # Window position (pixels)
   # position:
   #     x: 0
   #     y: 0
-  # Window padding (scaled by DPI) (changes require restart)
+  # Window padding (scaled by DPI)
   padding:
-    x: 2
-    y: 2
+    x: 0
+    y: 0
+
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: true
 
 # Colors (automatically generated)
 colors:

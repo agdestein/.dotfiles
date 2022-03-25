@@ -28,13 +28,15 @@ set fish_vi_force_cursor
 zoxide init fish | source
 starship init fish | source
 
+alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias smacritty="WINIT_X11_SCALE_FACTOR=1 alacritty"
-alias matlab="env LD_PRELOAD=/usr/lib/libstdc++.so LD_LIBRARY_PATH=/usr/lib/xorg/modules/dri/ MESA_LOADER_DRIVER_OVERRIDE=i965 matlab"
 alias pluto="julia --project=~/.julia/environments/pluto -e 'using Pluto; Pluto.run()'"
 alias l="exa -lah"
 alias n="nvim"
 alias gap="git -c 'interactive.diffFilter=less' add --patch"
-alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+
+# Force old driver for Matlab 2019a: i965
+alias matlab="env LD_PRELOAD=/usr/lib/libstdc++.so LD_LIBRARY_PATH=/usr/lib/xorg/modules/dri/ MESA_LOADER_DRIVER_OVERRIDE=i965 matlab"
 
 set -gx EDITOR "nvim"
 set -gx VISUAL "nvim"

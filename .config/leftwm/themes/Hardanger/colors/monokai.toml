@@ -1,0 +1,25 @@
+border_width = 2
+margin = 5
+workspace_margin = 5
+default_border_color = "#383830"
+floating_border_color = "#383830"
+# focused_border_color = "#383830"
+# focused_border_color = "#F8F8F2"
+# focused_border_color = "#F92672"
+# focused_border_color = "#AE81FF"
+focused_border_color = "#66D9EF"
+# focused_border_color = "#86DD8E"
+# focused_border_color = "#A6E22E"
+# focused_border_color = "#E6DB74"
+# focused_border_color = "#FD971F"
+
+#272822
+#F8F8F2
+#75715E
+#F92672
+#AE81FF
+#66D9EF
+#86DD8E
+#A6E22E
+#E6DB74
+#FD971F

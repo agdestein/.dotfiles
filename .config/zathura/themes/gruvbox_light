@@ -1,0 +1,30 @@
+# Gruvbox light
+set default-bg "#fbf1c7"
+set default-fg "#3c3836"
+
+set statusbar-fg "#3c3836"
+set statusbar-bg "#fbf1c7"
+
+set inputbar-bg "#3c3836"
+set inputbar-fg "#ebdbb2"
+
+set notification-error-bg "#9d0006"
+set notification-error-fg "#fbf1c7"
+
+set notification-warning-bg "#af3a03"
+set notification-warning-fg "#fbf1c7"
+
+set highlight-color "#d79921"
+set highlight-active-color "#076678"
+
+set completion-highlight-fg "#fbf1c7"
+set completion-highlight-bg "#90A959"
+
+set completion-bg "#fbf1c7"
+set completion-fg "#3c3836"
+
+set notification-bg "#b57614"
+set notification-fg "#fbf1c7"
+
+set recolor-lightcolor rgba(40,40,40,0.0)
+set recolor-darkcolor "#3c3836"

@@ -1,0 +1,9 @@
+; Dracula
+[delta]
+    features = decorations
+    syntax-theme = Dracula
+    plus-style = syntax
+    plus-style = syntax "#283a36"  
+    plus-emph-style = black green 
+    minus-style = syntax "#382a36"
+    minus-emph-style = black red 

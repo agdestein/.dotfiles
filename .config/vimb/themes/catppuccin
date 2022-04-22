@@ -1,0 +1,9 @@
+# Catppucin
+set completion-css=color:#D9E0EE; background-color:#1E1E2E; font:12pt JuliaMono;
+set completion-hover-css=color:#D9E0EE; background-color:#1E1E2E; font:12pt JuliaMono;
+set completion-selected-css=color:#D9E0EE; background-color:#6E6C7E; font:12pt JuliaMono;
+set input-css=color:#D9E0EE; background-color:#1E1E2E; font:12pt JuliaMono;
+set input-error-css=color:#F28FAD; background-color:#1E1E2E; font:12pt JuliaMono;
+set status-css=color:#FAE3B0; background-color:#161320; font:12pt JuliaMono;
+set status-ssl-css=color:#ABE9B3; background-color:#161320; font:12pt JuliaMono;
+set status-ssl-invalid-css=color:#F5C2E7; background-color:#161320; font:12pt JuliaMono;

@@ -1,6 +1,6 @@
 modkey = "Mod4"
 mousekey = "Mod4"
-tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 # tags = ["Kvam", "Folgefonna", "Eidfjord", "Odda", "Fele", "Voss", "Granvin", "Vidda", "Skip"]
 # tags = ["Алакритти", "Всемирная Паутина", "Навье-Стокс", "Статья", "Слек", "Сигнал", "7", "8", "9"] #, "Что", "то", "происходит"]
 
@@ -29,6 +29,7 @@ workspaces = []
 window_rules = [
     {window_class = "slack", spawn_on_tag = 5},
     {window_class = "signal", spawn_on_tag = 6},
+    # {window_class = "Makie", spawn_on_tag = 4},
     # {window_class = "Makie", focus = false, spawn_floating = true},
     # {window_class = "gksqt", spawn_floating = true},
 ]
@@ -41,6 +42,7 @@ keybind = [
     {command = "FocusWorkspacePrevious", modifier = ["modkey"], key = "h"},
     {command = "FocusWindowUp", modifier = ["modkey"], key = "k"},
     {command = "FocusWindowDown", modifier = ["modkey"], key = "j"},
+    {command = "FocusWindowTop", modifier = ["modkey"], key = "m"},
     {command = "MoveWindowUp", modifier = ["modkey", "Shift"], key = "k"},
     {command = "MoveWindowDown", modifier = ["modkey", "Shift"], key = "j"},
     {command = "MoveWindowTop", modifier = ["modkey"], key = "Return"},
@@ -56,6 +58,7 @@ keybind = [
     {command = "GotoTag", value = "7", modifier = ["modkey"], key = "7"},
     {command = "GotoTag", value = "8", modifier = ["modkey"], key = "8"},
     {command = "GotoTag", value = "9", modifier = ["modkey"], key = "9"},
+    {command = "GotoTag", value = "10", modifier = ["modkey"], key = "0"},
     {command = "MoveToTag", value = "1", modifier = ["modkey", "Shift"], key = "1"},
     {command = "MoveToTag", value = "2", modifier = ["modkey", "Shift"], key = "2"},
     {command = "MoveToTag", value = "3", modifier = ["modkey", "Shift"], key = "3"},
@@ -65,6 +68,7 @@ keybind = [
     {command = "MoveToTag", value = "7", modifier = ["modkey", "Shift"], key = "7"},
     {command = "MoveToTag", value = "8", modifier = ["modkey", "Shift"], key = "8"},
     {command = "MoveToTag", value = "9", modifier = ["modkey", "Shift"], key = "9"},
+    {command = "MoveToTag", value = "10", modifier = ["modkey", "Shift"], key = "0"},
     {command = "IncreaseMainWidth", value = "5", modifier = ["modkey"], key = "x"},
     {command = "DecreaseMainWidth", value = "5", modifier = ["modkey", "Shift"], key = "x"},
     {command = "NextLayout", modifier = ["modkey", "Control"], key = "k"},
@@ -72,6 +76,7 @@ keybind = [
     {command = "ToggleSticky", modifier = ["modkey"], key = "y"},
     {command = "ToggleFloating", modifier = ["modkey", "Shift"], key = "space"},
     {command = "CloseWindow", modifier = ["modkey", "Shift"], key = "c"},
+    {command = "ToggleScratchPad", value = "Browser", modifier = ["modkey"], key = "v"},
     {command = "ToggleScratchPad", value = "alacritty", modifier = ["modkey", "Shift"], key = "a"},
     {command = "ToggleScratchPad", value = "htop", modifier = ["modkey"], key = "z"},
     {command = "ToggleScratchPad", value = "bpytop", modifier = ["modkey"], key = "a"},
@@ -80,7 +85,7 @@ keybind = [
     {command = "Execute", value = "/home/syver/.local/bin/hardanger", modifier = ["modkey"], key = "r"},
     {command = "Execute", value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e /home/syver/.local/bin/dot", modifier = ["modkey", "Shift"], key = "d"},
     {command = "Execute", value = "/home/syver/.local/bin/screenlayout", modifier = ["modkey", "Shift"], key = "n"},
-    {command = "Execute", value = "/home/syver/.local/bin/keyboardmenu", modifier = ["modkey"], key = "0"},
+    {command = "Execute", value = "/home/syver/.local/bin/keyboardmenu", modifier = ["modkey"], key = "g"},
     {command = "Execute", value = "~/.config/rofi/launchers/colorful/launcher.sh", modifier = ["modkey"], key = "p"},
     {command = "Execute", value = "emacs", modifier = ["modkey", "Shift"], key = "e"},
     {command = "Execute", value = "flameshot gui", modifier = ["modkey", "Shift"], key = "i"},
@@ -102,7 +107,17 @@ keybind = [
     {command = "Execute", value = "dunstctl close-all", modifier = ["modkey", "Shift"], key = "comma"},
     {command = "Execute", value = "dunstctl history-pop", modifier = ["modkey"], key = "period"},
     {command = "Execute", value = "dunstctl context", modifier = ["modkey", "Shift"], key = "period"},
+    {command = "Execute", value = "/home/syver/.local/bin/bgrand", modifier = ["modkey"], key = "b"},
+    {command = "Execute", value = "/home/syver/.local/bin/setbgdir", modifier = ["modkey", "Control"], key = "b"},
 ]
+
+[[scratchpad]]
+name = "Browser"
+value = "vimb"
+x = 0.2
+y = 0.1
+height = 0.8
+width = 0.6
 
 [[scratchpad]]
 name = "alacritty"

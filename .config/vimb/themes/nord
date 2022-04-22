@@ -1,0 +1,9 @@
+# Nord
+set completion-css=color:#D8DEE9; background-color:#2E3440; font:12pt JuliaMono;
+set completion-hover-css=color:#D8DEE9; background-color:#2E3440; font:12pt JuliaMono;
+set completion-selected-css=color:#D8DEE9; background-color:#616E88; font:12pt JuliaMono;
+set input-css=color:#D8DEE9; background-color:#2E3440; font:12pt JuliaMono;
+set input-error-css=color:#BF616A; background-color:#2E3440; font:12pt JuliaMono;
+set status-css=color:#EBCB8B; background-color:#3B4252; font:12pt JuliaMono;
+set status-ssl-css=color:#A3BE8C; background-color:#3B4252; font:12pt JuliaMono;
+set status-ssl-invalid-css=color:#B48EAD; background-color:#3B4252; font:12pt JuliaMono;

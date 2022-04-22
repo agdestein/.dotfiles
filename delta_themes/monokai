@@ -1,0 +1,9 @@
+; Monokai
+[delta]
+    features = decorations
+    syntax-theme = monokai
+    plus-style = syntax
+    plus-style = syntax "#273822"  
+    plus-emph-style = black green 
+    minus-style = syntax "#372822"
+    minus-emph-style = black red 

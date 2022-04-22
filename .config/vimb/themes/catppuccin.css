@@ -1,0 +1,60 @@
+*,div,pre,textarea,body,input,td,tr,p
+{
+  background-color: #1E1E2E !important;
+  background-image: none;
+  color: #D9E0EE !important;
+  /* border-color: #161320 !important; */
+  border-color: #302D41 !important;
+}
+
+h1,h2,h3,h4
+{
+  background-color: #1E1E2E !important;
+  color: #D9E0EE !important;
+}
+
+a
+{
+  color: #96CDFB !important;
+}
+
+a:hover,a:focus
+{
+  color: #89DCEB  !important;
+}
+
+a:visited
+{
+  color: #F5C2E7 !important;
+}
+
+/* img */
+/* { */
+/*   opacity: .8; */
+/* } */
+
+/* img:hover */
+/* { */
+/*   opacity: 1; */
+/* } */
+
+._hintLabel
+{
+  /* text-transform: uppercase !important; */
+  background-color: #ABE9B3 !important;
+  /* font: 18pt JuliaMono !important; */
+  /* font: 2em JuliaMono !important; */
+  /* font-size: 18px !important; */
+  color: #D9E0EE !important;
+  /* opacity: 1.0 !important; */
+}
+
+._hintElem._hintFocus
+{
+  color: #F28FAD !important;
+}
+
+/* ._hintElem._hintFocus img */
+/* { */
+/*   opacity: 1; */
+/* } */

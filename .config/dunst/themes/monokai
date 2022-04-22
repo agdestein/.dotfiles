@@ -1,0 +1,18 @@
+# Monokai
+[urgency_low]
+    background = "#272822"
+    foreground = "#75715E"
+    frame_color = "#383830"
+    timeout = 10
+
+[urgency_normal]
+    background = "#66d9ef"
+    foreground = "#272822"
+    frame_color = "#272822"
+    timeout = 10
+
+[urgency_critical]
+    background = "#f92672"
+    foreground = "#f8f8f2"
+    frame_color = "#f8f8f2"
+    timeout = 0

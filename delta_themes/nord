@@ -1,0 +1,9 @@
+; Nord
+[delta]
+    features = decorations
+    syntax-theme = Nord
+    plus-style = syntax
+    plus-style = syntax "#2E4448"  
+    plus-emph-style = black green 
+    minus-style = syntax "#3E3444"
+    minus-emph-style = black red 

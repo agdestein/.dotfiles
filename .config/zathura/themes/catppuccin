@@ -1,0 +1,39 @@
+# Catppuccin
+set default-fg 			    "#D9E0EE"
+set default-bg 			    "#1E1E2E"
+
+set completion-bg		    "#302D41"
+set completion-fg		    "#D9E0EE"
+set completion-highlight-bg	"#575268"
+set completion-highlight-fg	"#D9E0EE"
+set completion-group-bg		"#302D41"
+set completion-group-fg		"#96CDFB"
+
+set statusbar-fg		    "#D9E0EE"
+set statusbar-bg		    "#302D41"
+
+set notification-bg		    "#302D41"
+set notification-fg		    "#D9E0EE"
+set notification-error-bg	"#302D41"
+set notification-error-fg	"#F28FAD"
+set notification-warning-bg	"#302D41"
+set notification-warning-fg	"#FAE3B0"
+
+set inputbar-fg			    "#D9E0EE"
+set inputbar-bg 		    "#302D41"
+
+set recolor-lightcolor		"#1E1E2E"
+set recolor-darkcolor		"#D9E0EE"
+
+set index-fg			    "#D9E0EE"
+set index-bg			    "#1E1E2E"
+set index-active-fg		    "#D9E0EE"
+set index-active-bg		    "#302D41"
+
+set render-loading              true
+set render-loading-bg		"#1E1E2E"
+set render-loading-fg		"#D9E0EE"
+
+set highlight-color		    "#575268"
+set highlight-fg            "#F5C2E7"
+set highlight-active-color	"#F5C2E7"

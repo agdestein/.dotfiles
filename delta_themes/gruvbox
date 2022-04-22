@@ -1,0 +1,9 @@
+; Gruvbox
+[delta]
+    features = decorations
+    syntax-theme = gruvbox-dark
+    plus-style = syntax
+    plus-style = syntax "#404021"  
+    plus-emph-style = black green 
+    minus-style = syntax "#402822"
+    minus-emph-style = black red 

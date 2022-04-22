@@ -1,0 +1,106 @@
+*,div,pre,textarea,body,input,td,tr,p
+{
+  background-color: #282828 !important;
+  background-image: none;
+  color: #ebdbb2 !important;
+  border-color: #3c3836 !important;
+}
+
+h1,h2,h3,h4
+{
+  background-color: #282828 !important;
+  color: #ebdbb2 !important;
+}
+
+a
+{
+  color: #689d6a !important;
+}
+
+a:hover,a:focus
+{
+  color: #fabd2f  !important;
+}
+
+a:visited
+{
+  color: #b16286 !important;
+}
+
+/* img */
+/* { */
+/*   opacity: .8; */
+/* } */
+
+/* img:hover */
+/* { */
+/*   opacity: 1; */
+/* } */
+
+/* ._hintLabel */
+/* { */
+/*   /1* text-transform: uppercase !important; *1/ */
+/*   background-color: #98971a !important; */
+/*   /1* font: 18pt JuliaMono !important; *1/ */
+/*   /1* font: 2em JuliaMono !important; *1/ */
+/*   /1* font-size: 18px !important; *1/ */
+/*   color: #ebdbb2 !important; */
+/*   /1* opacity: 1.0 !important; *1/ */
+/* } */
+/* ._hintElem._hintFocus */
+/* { */
+/*   color: #fb4934 !important; */
+/* } */
+/* ._hintElem._hintFocus img */
+/* { */
+/*   opacity: 1; */
+/* } */
+
+/* Hint mode color styling
+ * Color scheme: Base16 Eighties (https://github.com/chriskempson/base16)
+ *
+ * The precedence of the user style is lower than that of the website so you
+ * have to mark your style definition to have higher priority.
+ */
+span[vimbhint^='label'] {
+    background-color: #ebdbb2 !important;
+    border: 1px solid #3c3836 !important;
+    color: #282828 !important;
+    font: bold 10pt monospace !important;
+    opacity: 1 !important;
+    padding: .1em .4em !important;
+    text-transform: uppercase !important;
+}
+span[vimbhint='label focus'] {
+    font: bold 13pt monospace !important;
+}
+*[vimbhint^='hint'] {
+    background-color: #fabd2f !important;
+    color: #282828 !important;
+}
+*[vimbhint='hint focus'] {
+    background-color: #83a598 !important;
+    color: #282828 !important;
+}
+
+/* # Normal colors */
+/* normal: */
+/*   black: '#282828' */
+/*   red: '#cc241d' */
+/*   green: '#98971a' */
+/*   yellow: '#d79921' */
+/*   blue: '#458588' */
+/*   magenta: '#b16286' */
+/*   cyan: '#689d6a' */
+/*   white: '#a89984' */
+
+/* # Bright colors */
+/* bright: */
+/*   black: '#928374' */
+/*   red: '#fb4934' */
+/*   green: '#b8bb26' */
+/*   yellow: '#fabd2f' */
+/*   blue: '#83a598' */
+/*   magenta: '#d3869b' */
+/*   cyan: '#8ec07c' */
+/*   white: '#ebdbb2' */

@@ -5,3 +5,5 @@ set f (echo -e "adriaan\nlaptop\noffice_below\noffice_left\noffice_right\nring" 
 if test $f
     ~/.screenlayout/$f.sh
 end
+
+leftwm-command "SoftReload"

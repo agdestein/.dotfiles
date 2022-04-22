@@ -1,0 +1,19 @@
+border_width = 2
+margin = 5
+workspace_margin = 5
+default_border_color = "#4b5263"
+floating_border_color = "#98c379"
+focused_border_color = "#56b6c2"
+
+#282c34
+#abb2bf
+#e06c75
+#be5046
+#98c379
+#e5c07b
+#d19a66
+#61afef
+#c678dd
+#56b6c2
+#4b5263
+#5c6370

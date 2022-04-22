@@ -1,0 +1,22 @@
+# One Dark
+set completion-css=color:#abb2bf; background-color:#282c34; font:12pt JuliaMono;
+set completion-hover-css=color:#abb2bf; background-color:#282c34; font:12pt JuliaMono;
+set completion-selected-css=color:#abb2bf; background-color:#5c6370; font:12pt JuliaMono;
+set input-css=color:#abb2bf; background-color:#282c34; font:12pt JuliaMono;
+set input-error-css=color:#e06c75; background-color:#282c34; font:12pt JuliaMono;
+set status-css=color:#e5c07b; background-color:#282c34; font:12pt JuliaMono;
+set status-ssl-css=color:#98c379; background-color:#282c34; font:12pt JuliaMono;
+set status-ssl-invalid-css=color:#c678dd; background-color:#282c34; font:12pt JuliaMono;
+
+#282c34
+#abb2bf
+#e06c75
+#be5046
+#98c379
+#e5c07b
+#d19a66
+#61afef
+#c678dd
+#56b6c2
+#4b5263
+#5c6370

@@ -1,0 +1,39 @@
+# Monokai
+set notification-error-bg       "#F92672" # Red
+set notification-error-fg       "#f8f8f2" # Foreground
+set notification-warning-bg     "#FD971F" # Orange
+set notification-warning-fg     "#4e4c38" # Selection
+set notification-bg             "#272822" # Background
+set notification-fg             "#f8f8f2" # Foreground
+
+set completion-bg               "#272822" # Background
+set completion-fg               "#75715E" # Comment
+set completion-group-bg         "#272822" # Background
+set completion-group-fg         "#75715E" # Comment
+set completion-highlight-bg     "#4E4C38" # Selection
+set completion-highlight-fg     "#f8f8f2" # Foreground
+
+set index-bg                    "#272822" # Background
+set index-fg                    "#f8f8f2" # Foreground
+set index-active-bg             "#4e4c38" # Current Line
+set index-active-fg             "#f8f8f2" # Foreground
+
+set inputbar-bg                 "#272822" # Background
+set inputbar-fg                 "#f8f8f2" # Foreground
+set statusbar-bg                "#272822" # Background
+set statusbar-fg                "#f8f8f2" # Foreground
+
+set highlight-color             "#FD971F" # Orange
+set highlight-active-color      "#AE81FF" # Pink
+
+# set default-bg rgba(39,40,34,0.8)         # Background
+set default-bg                  "#272822" # Background
+set default-fg                  "#f8f8f2" # Foreground
+
+set render-loading              true
+set render-loading-fg           "#272822" # Background
+set render-loading-bg           "#f8f8f2" # Foreground
+
+set recolor-lightcolor rgba(39,40,34,0.0) # Background
+# set recolor-lightcolor          "#272822" # Background
+set recolor-darkcolor           "#f8f8f2" # Foreground

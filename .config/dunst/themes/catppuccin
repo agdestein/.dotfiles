@@ -1,0 +1,18 @@
+# Catppuccin
+[urgency_low]
+    background = "#1E1E2E"
+    foreground = "#D9E0EE"
+    frame_color = "#3B4252"
+    timeout = 10
+
+[urgency_normal]
+    background = "#161320"
+    foreground = "#D9E0EE"
+    frame_color = "#D9E0EE"
+    timeout = 10
+
+[urgency_critical]
+    background = "#F28FAD"
+    foreground = "#D9E0EE"
+    frame_color = "#D9E0EE"
+    timeout = 0

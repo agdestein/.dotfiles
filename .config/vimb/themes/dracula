@@ -1,0 +1,9 @@
+# Dracula
+set completion-css=color:#f8f8f2; background-color:#282a36; font:12pt JuliaMono;
+set completion-hover-css=color:#f8f8f2; background-color:#282a36; font:12pt JuliaMono;
+set completion-selected-css=color:#f8f8f2; background-color:#575b70; font:12pt JuliaMono;
+set input-css=color:#f8f8f2; background-color:#282a36; font:12pt JuliaMono;
+set input-error-css=color:#ff5555; background-color:#282a36; font:12pt JuliaMono;
+set status-css=color:#f1fa8c; background-color:#282a36; font:12pt JuliaMono;
+set status-ssl-css=color:#caa9fa; background-color:#282a36; font:12pt JuliaMono;
+set status-ssl-invalid-css=color:#ff79c6; background-color:#282a36; font:12pt JuliaMono;

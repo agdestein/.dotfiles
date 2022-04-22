@@ -1,0 +1,110 @@
+*,div,pre,textarea,body,input,td,tr,p
+{
+  background-color: #fbf1c7 !important;
+  background-image: none;
+  color: #3c3836 !important;
+  border-color: #d5c4a1 !important;
+}
+
+h1,h2,h3,h4
+{
+  background-color: #fbf1c7 !important;
+  color: #fbf1c7 !important;
+}
+
+a
+{
+  color: #689d6a !important;
+}
+
+a:hover,a:focus
+{
+  color: #b57614  !important;
+}
+
+a:visited
+{
+  color: #b16286 !important;
+}
+
+/* img */
+/* { */
+/*   opacity: .8; */
+/* } */
+
+/* img:hover */
+/* { */
+/*   opacity: 1; */
+/* } */
+
+/* Hint mode color styling
+ * Color scheme: Base16 Eighties (https://github.com/chriskempson/base16)
+ *
+ * The precedence of the user style is lower than that of the website so you
+ * have to mark your style definition to have higher priority.
+ */
+span[vimbhint^='label'] {
+    background-color: #fbf1c7 !important;
+    border: 1px solid #d5c4a1 !important;
+    color: #fbf1c7 !important;
+    font: bold 10pt monospace !important;
+    opacity: 1 !important;
+    padding: .1em .4em !important;
+    text-transform: uppercase !important;
+}
+span[vimbhint='label focus'] {
+    font: bold 13pt monospace !important;
+}
+*[vimbhint^='hint'] {
+    background-color: #d79921 !important;
+    color: #fbf1c7 !important;
+}
+*[vimbhint='hint focus'] {
+    background-color: #076678 !important;
+    color: #fbf1c7 !important;
+}
+
+/* dark0_hard  = #1d2021 */
+/* dark0       = #282828 */
+/* dark0_soft  = #32302f */
+/* dark1       = #3c3836 */
+/* dark2       = #504945 */
+/* dark3       = #665c54 */
+/* dark4       = #7c6f64 */
+/* dark4_256   = #7c6f64 */
+/**/
+/* gray_245    = #928374 */
+/* gray_244    = #928374 */
+/**/
+/* light0_hard = #f9f5d7 */
+/* light0      = #fbf1c7 */
+/* light0_soft = #f2e5bc */
+/* light1      = #ebdbb2 */
+/* light2      = #d5c4a1 */
+/* light3      = #bdae93 */
+/* light4      = #a89984 */
+/* light4_256  = #a89984 */
+/**/
+/* bright_red     = #fb4934 */
+/* bright_green   = #b8bb26 */
+/* bright_yellow  = #fabd2f */
+/* bright_blue    = #83a598 */
+/* bright_purple  = #d3869b */
+/* bright_aqua    = #8ec07c */
+/* bright_orange  = #fe8019 */
+/**/
+/* neutral_red    = #cc241d */
+/* neutral_green  = #98971a */
+/* neutral_yellow = #d79921 */
+/* neutral_blue   = #458588 */
+/* neutral_purple = #b16286 */
+/* neutral_aqua   = #689d6a */
+/* neutral_orange = #d65d0e */
+/**/
+/* faded_red      = #9d0006 */
+/* faded_green    = #79740e */
+/* faded_yellow   = #b57614 */
+/* faded_blue     = #076678 */
+/* faded_purple   = #8f3f71 */
+/* faded_aqua     = #427b58 */
+/* faded_orange   = #af3a03 */

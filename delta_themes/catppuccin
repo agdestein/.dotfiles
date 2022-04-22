@@ -1,0 +1,9 @@
+; Catppuccin
+[delta]
+    features = decorations
+    syntax-theme = base16-256
+    plus-style = syntax
+    plus-style = syntax "#1E2E2E"  
+    plus-emph-style = black green 
+    minus-style = syntax "#2E1E2E"
+    minus-emph-style = black red 

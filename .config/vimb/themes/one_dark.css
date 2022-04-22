@@ -1,0 +1,65 @@
+*,div,pre,textarea,body,input,td,tr,p
+{
+  background-color: #282c34 !important;
+  background-image: none;
+  color: #abb2bf !important;
+  border-color: #3A3F4B !important;
+}
+
+h1,h2,h3,h4
+{
+  background-color: #282c34 !important;
+  color: #abb2bf !important;
+}
+
+a
+{
+  color: #61afef !important;
+}
+
+a:hover,a:focus
+{
+  color: #56b6c2  !important;
+}
+
+a:visited
+{
+  color: #c678dd !important;
+}
+
+._hintLabel
+{
+  /* text-transform: uppercase !important; */
+  background-color: #98c379 !important;
+  /* font: 18pt JuliaMono !important; */
+  /* font: 2em JuliaMono !important; */
+  /* font-size: 18px !important; */
+  color: #e5c07b !important;
+  /* opacity: 1.0 !important; */
+}
+
+._hintElem._hintFocus
+{
+  color: #e06c75 !important;
+}
+
+/* ._hintElem._hintFocus img */
+/* { */
+/*   opacity: 1; */
+/* } */
+
+
+/*
+#282c34
+#abb2bf
+#e06c75
+#be5046
+#98c379
+#e5c07b
+#d19a66
+#61afef
+#c678dd
+#56b6c2
+#4b5263
+#5c6370
+*/

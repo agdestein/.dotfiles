@@ -1,0 +1,9 @@
+; One-Dark
+[delta]
+    features = decorations
+    syntax-theme = base16-256
+    plus-style = syntax
+    plus-style = syntax "#283c34"  
+    plus-emph-style = black green 
+    minus-style = syntax "#382c34"
+    minus-emph-style = black red 

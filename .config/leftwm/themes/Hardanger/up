@@ -10,9 +10,11 @@ fi
 ln -s ${SCRIPTPATH}/down /tmp/leftwm-theme-down
 
 unclutter --timeout 1 --ignore-scrolling &
-picom --experimental-backends &> /dev/null & 
+picom --experimental-backends &> /dev/null &
 dunst &
 # conky &
+
+clipmenud &
 
 # Set the theme.toml config
 leftwm-command "LoadTheme $SCRIPTPATH/theme.toml"
@@ -23,12 +25,10 @@ nitrogen --restore
 # Boot a polybar for each monitor
 polybar -m | sed s/:.*// | tac | while read -r monitor
 do 
-    # monitor=$monitor polybar -c config.ini main &> /dev/null &
-    if [ "$monitor" == "DP3" ]; then
-        echo tata
-        monitor=$monitor polybar smallbar &> /dev/null &
-    else
-        echo toto
-        monitor=$monitor polybar main &> /dev/null &
-    fi
+    monitor=$monitor polybar main &> /dev/null &
+    # if [ "$monitor" == "DP3" ]; then
+    #     monitor=$monitor polybar smallbar &> /dev/null &
+    # else
+    #     monitor=$monitor polybar main &> /dev/null &
+    # fi
 done

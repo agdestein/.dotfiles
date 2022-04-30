@@ -33,6 +33,7 @@ alias smacritty="WINIT_X11_SCALE_FACTOR=1 alacritty"
 alias pluto="julia --project=~/.julia/environments/pluto -e 'using Pluto; Pluto.run()'"
 alias l="exa -lah"
 alias n="nvim"
+alias h="handlr open"
 alias gap="git -c 'interactive.diffFilter=less' add --patch"
 
 # Force old driver for Matlab 2019a: i965
@@ -40,6 +41,9 @@ alias matlab="env LD_PRELOAD=/usr/lib/libstdc++.so LD_LIBRARY_PATH=/usr/lib/xorg
 
 set -gx EDITOR "nvim"
 set -gx VISUAL "nvim"
+# set -gx MANPAGER "most"
+set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
+set -gx PRINTER "olive"
 
 
 set fish_color_autosuggestion      blue

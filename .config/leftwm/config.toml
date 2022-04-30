@@ -12,8 +12,10 @@ layouts = [
     "EvenHorizontal",
     "EvenVertical",
     "Fibonacci",
+    "LeftMain",
     "CenterMain",
     "CenterMainBalanced",
+    "CenterMainFluid",
     "Monocle",
     "RightWiderLeftStack",
     "LeftWiderRightStack",
@@ -79,14 +81,13 @@ keybind = [
     {command = "ToggleScratchPad", value = "Browser", modifier = ["modkey"], key = "v"},
     {command = "ToggleScratchPad", value = "alacritty", modifier = ["modkey", "Shift"], key = "a"},
     {command = "ToggleScratchPad", value = "htop", modifier = ["modkey"], key = "z"},
-    {command = "ToggleScratchPad", value = "bpytop", modifier = ["modkey"], key = "a"},
     {command = "ToggleScratchPad", value = "bottom", modifier = ["modkey"], key = "q"},
-    {command = "ToggleScratchPad", value = "btop", modifier = ["modkey"], key = "s"},
     {command = "Execute", value = "/home/syver/.local/bin/hardanger", modifier = ["modkey"], key = "r"},
     {command = "Execute", value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e /home/syver/.local/bin/dot", modifier = ["modkey", "Shift"], key = "d"},
     {command = "Execute", value = "/home/syver/.local/bin/screenlayout", modifier = ["modkey", "Shift"], key = "n"},
     {command = "Execute", value = "/home/syver/.local/bin/keyboardmenu", modifier = ["modkey"], key = "g"},
-    {command = "Execute", value = "~/.config/rofi/launchers/colorful/launcher.sh", modifier = ["modkey"], key = "p"},
+    {command = "Execute", value = "/home/syver/.local/bin/run_dmenu_run", modifier = ["modkey"], key = "p"},
+    {command = "Execute", value = "/home/syver/.local/bin/run_clipmenu", modifier = ["modkey"], key = "i"},
     {command = "Execute", value = "emacs", modifier = ["modkey", "Shift"], key = "e"},
     {command = "Execute", value = "flameshot gui", modifier = ["modkey", "Shift"], key = "i"},
     {command = "Execute", value = "flameshot screen -c", modifier = [], key = "Print"},
@@ -100,7 +101,6 @@ keybind = [
     {command = "Execute", value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e ranger", modifier = ["modkey"], key = "f"},
     {command = "Execute", value = "pcmanfm", modifier = ["modkey", "Shift"], key = "f"},
     {command = "Execute", value = "rofi -show emoji -modi emoji", modifier = ["modkey", "Control", "Shift"], key = "e"},
-    {command = "Execute", value = "~/.config/rofi/powermenu/powermenu.sh", modifier = ["modkey", "Control"], key = "o"},
     # {command = "Execute", value = "slock", modifier = ["modkey", "Control"], key = "l"},
     {command = "Execute", value = "light-locker-command -l", modifier = ["modkey", "Control"], key = "l"},
     {command = "Execute", value = "dunstctl close", modifier = ["modkey"], key = "comma"},
@@ -136,24 +136,8 @@ height = 0.7
 width = 0.6
 
 [[scratchpad]]
-name = "bpytop"
-value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e bpytop"
-x = 0.2
-y = 0.15
-height = 0.7
-width = 0.6
-
-[[scratchpad]]
 name = "bottom"
 value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e btm"
-x = 0.2
-y = 0.15
-height = 0.7
-width = 0.6
-
-[[scratchpad]]
-name = "btop"
-value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e btop"
 x = 0.2
 y = 0.15
 height = 0.7

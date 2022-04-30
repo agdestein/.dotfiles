@@ -27,7 +27,6 @@ set editor-command=smallacritty -e nvim %s
 #   au LoadCommited * normal zz|8zI
 # aug end
 
-nnoremap <C-e> :e! simplyread();<CR>
 nnoremap <C-t> :set stylesheet!<CR><Esc>
 nnoremap <F11> :set fullscreen!<CR><Esc>
 nnoremap <C-l> :source ~/.config/vimb/config<CR>
@@ -85,25 +84,7 @@ nmap + zI
 nmap - zO
 nmap = zz
 
-# Shortcuts allow the opening of an URI built up from a named template with
-# additional parameters.
-shortcut-add duck=https://duckduckgo.com/?q=$0
-shortcut-add dl=https://duckduckgo.com/lite/?q=$0
-shortcut-add w=https://en.wikipedia.org/w/index.php?search=$0
-shortcut-add aw=https://wiki.archlinux.org/index.php/search=$0
-shortcut-add d=http://dict.cc/?s=$0
-shortcut-add lar=https://www.larousse.fr/dictionnaires/francais/$0
-shortcut-add g=https://encrypted.google.com/search?q=$0
-shortcut-add y=http://www.youtube.com/results?search_query=$0
-shortcut-add gh=https://github.com/$0
-shortcut-add map=https://maps.google.com/maps?saddr=$0&daddr=$1 # :open map "city hall, London" railway station, London
-shortcut-add zim=https://zwebmail.cwi.nl/zimbra/#1
-shortcut-add lem=https://www.lemonde.fr/
-shortcut-add vimb=https://fanglingsu.github.io/vimb/man.html
-
-# Set the shortcut as the default, that is the shortcut to be used if no
-# shortcut is given and the string to open is not an URI.
-shortcut-default duck
+source ~/.config/vimb/cfg/shortcuts
 
 ## BEGIN THEME
 # Gruvbox

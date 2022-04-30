@@ -1,0 +1,19 @@
+.cfg
+
+# Home directories
+Applications/
+Desktop/
+Documents/
+Downloads/
+Dropbox/
+Library/
+Movies/
+Music/
+Pictures/
+Templates/
+Videos/
+projects/
+
+# Extensions
+*Manifest.toml
+*.DS_Store

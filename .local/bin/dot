@@ -1,13 +1,11 @@
 #!/usr/bin/env fish
 
-set f (echo -e "alacritty\nbat\ndoom\ndot\ndunst\nfish\nhardanger\njulia_startup\njulia_v1.7\nkitty\nleftwm\nnvim\npicom\npolybar\nranger\nrofi\nscreenlayout\nstarship\ntmux\nvimb\nzathura" | rofi -dmenu -i)
+set f (echo -e "alacritty\nbat\ndot\ndunst\nfish\nhardanger\njulia_startup\njulia_v1.7\nkitty\nleftwm\nnvim\npicom\npolybar\nranger\nrofi\nscreenlayout\nstarship\ntmux\nvimb\nzathura" | rofi -dmenu -i)
 
 if test $f = "alacritty"
     nvim ~/.config/alacritty/alacritty.yml
 else if test $f = "bat"
     nvim ~/.config/bat/config
-else if test $f = "doom"
-    nvim ~/.config/doom/config.el
 else if test $f = "dot"
     nvim ~/.local/bin/dot
 else if test $f = "dunst"
@@ -45,19 +43,3 @@ else if test $f = "vimb"
 else if test $f = "zathura"
     nvim ~/.config/zathura/zathurarc
 end
-
-# alacritty
-# bat
-# doom
-# dot
-# dunst
-# fish
-# hardanger
-# leftwm
-# nvim
-# picom
-# polybar
-# ranger
-# rofi
-# starship
-# zathura

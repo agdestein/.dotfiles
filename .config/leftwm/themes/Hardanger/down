@@ -15,3 +15,4 @@ pkill polybar
 pkill dunst
 pkill lxsession
 pkill conky
+pkill clipmenud

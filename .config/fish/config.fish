@@ -1,10 +1,5 @@
 # Commands to run in interactive sessions can go here
 if status is-interactive
-    # New greeting
-    # neofetch
-    # colorscript --random
-    # colorscript -e panes
-    # einar
 end
 
 set fish_greeting
@@ -36,8 +31,10 @@ alias n="nvim"
 alias h="handlr open"
 alias gap="git -c 'interactive.diffFilter=less' add --patch"
 
-# Force old driver for Matlab 2019a: i965
-alias matlab="env LD_PRELOAD=/usr/lib/libstdc++.so LD_LIBRARY_PATH=/usr/lib/xorg/modules/dri/ MESA_LOADER_DRIVER_OVERRIDE=i965 matlab"
+if test (uname) = Linux
+    # Force old driver for Matlab 2019a: i965
+    alias matlab="env LD_PRELOAD=/usr/lib/libstdc++.so LD_LIBRARY_PATH=/usr/lib/xorg/modules/dri/ MESA_LOADER_DRIVER_OVERRIDE=i965 matlab"
+end
 
 set -gx EDITOR "nvim"
 set -gx VISUAL "nvim"
@@ -45,6 +42,9 @@ set -gx VISUAL "nvim"
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -gx PRINTER "olive"
 
+if test (uname) = Darwin
+    export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
+end
 
 set fish_color_autosuggestion      blue
 # set fish_color_cancel              -r

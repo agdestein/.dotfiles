@@ -1,7 +1,7 @@
 ; Gruvbox-light
 [delta]
     features = decorations
-    syntax-theme = gruvbox-dark
+    syntax-theme = gruvbox-light
     plus-style = syntax
     plus-style = syntax "#ebf1b7"  
     plus-emph-style = black green 

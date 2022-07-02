@@ -33,8 +33,8 @@ from libqtile.utils import guess_terminal
 
 mod = "mod4"
 # terminal = guess_terminal()
-# terminal = "WINIT_X11_SCALE_FACTOR=1 alacritty"
-terminal = "alacritty"
+terminal = "env WINIT_X11_SCALE_FACTOR=1 alacritty"
+# terminal = "alacritty"
 
 keys = [
     # Switch between windows
@@ -129,7 +129,7 @@ widget_defaults = dict(
     font="JuliaMono",
     fontsize=13,
     padding=3,
-    background="#282c34",
+    background="#21252B",
     foreground="#abb2bf",
 )
 extension_defaults = widget_defaults.copy()

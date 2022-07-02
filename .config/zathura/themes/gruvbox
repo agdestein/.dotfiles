@@ -1,31 +1,40 @@
 # Gruvbox
-# set default-bg rgba(40,40,40,0.8)
-set default-bg "#282828"
-set default-fg "#EBDBB2"
+set notification-error-bg       "#cc241d" # Red
+set notification-error-fg       "#ebdbb2" # Foreground
+set notification-warning-bg     "#d65d0e" # Orange
+set notification-warning-fg     "#504945" # Selection
+set notification-bg             "#282828" # Background
+set notification-fg             "#ebdbb2" # Foreground
 
-set statusbar-fg "#EBDBB2"
-set statusbar-bg "#282828"
+set completion-bg               "#282828" # Background
+set completion-fg               "#928374" # Comment
+set completion-group-bg         "#282828" # Background
+set completion-group-fg         "#928374" # Comment
+set completion-highlight-bg     "#504945" # Selection
+set completion-highlight-fg     "#ebdbb2" # Foreground
 
-set inputbar-bg "#EBDBB2"
-set inputbar-fg "#282828"
+set index-bg                    "#282828" # Background
+set index-fg                    "#ebdbb2" # Foreground
+set index-active-bg             "#504945" # Current Line
+set index-active-fg             "#ebdbb2" # Foreground
 
-set notification-error-bg "#fb4934"
-set notification-error-fg "#151515"
+set inputbar-bg                 "#282828" # Background
+set inputbar-fg                 "#ebdbb2" # Foreground
+set statusbar-bg                "#282828" # Background
+set statusbar-fg                "#ebdbb2" # Foreground
 
-set notification-warning-bg "#fb4934"
-set notification-warning-fg "#151515"
+set highlight-color             "#fabd2f" # Yellow
+set highlight-fg                "#504945" # Yellow
+set highlight-active-color      "#98971a" # Green
 
-set highlight-color "#fabd2f"
-set highlight-active-color "#458588"
+# set default-bg rgba(40,42,54,0.8)         # Background
+set default-bg                  "#282828" # Background
+set default-fg                  "#ebdbb2" # Foreground
 
-set completion-highlight-fg "#151515"
-set completion-highlight-bg "#98971a"
+set render-loading              true
+set render-loading-fg           "#282828" # Background
+set render-loading-bg           "#ebdbb2" # Foreground
 
-set completion-bg "#282828"
-set completion-fg "#EBDBB2"
-
-set notification-bg "#d79921"
-set notification-fg "#282828"
-
-set recolor-lightcolor rgba(40,40,40,0.0)
-set recolor-darkcolor "#EBDBB2"
+# set recolor-lightcolor rgba(40,40,40,0.0) # Background
+set recolor-lightcolor          "#282828" # Background
+set recolor-darkcolor           "#ebdbb2" # Foreground

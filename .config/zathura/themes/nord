@@ -24,6 +24,7 @@ set statusbar-bg                "#2e3440" # Background
 set statusbar-fg                "#e5e9f0" # Foreground
 
 set highlight-color             "#D08770" # Orange
+set highlight-fg                "#4C566A" # Yellow
 set highlight-active-color      "#ff79c6" # Pink
 
 # set default-bg rgba(40,42,54,0.8)         # Background
@@ -34,6 +35,6 @@ set render-loading              true
 set render-loading-fg           "#2e3440" # Background
 set render-loading-bg           "#e5e9f0" # Foreground
 
-set recolor-lightcolor rgba(40,42,54,0.0) # Background
-# set recolor-lightcolor          "#2E3440" # Background
+# set recolor-lightcolor rgba(40,42,54,0.0) # Background
+set recolor-lightcolor          "#2E3440" # Background
 set recolor-darkcolor           "#e5e9f0" # Foreground

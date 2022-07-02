@@ -1,6 +1,5 @@
 # Adding reverse search between gvim and zathura
 set synctex true
-# set synctex-editor-command "gvim --remote-silent +%{line} %{input}"
 
 set adjust-open "best-fit"
 
@@ -19,37 +18,8 @@ set recolor-keephue "true"
 
 set font "JuliaMono 12"
 
-## BEGIN THEME
-# Gruvbox
-# set default-bg rgba(40,40,40,0.8)
-set default-bg "#282828"
-set default-fg "#EBDBB2"
+include themes/gruvbox
 
-set statusbar-fg "#EBDBB2"
-set statusbar-bg "#282828"
-
-set inputbar-bg "#EBDBB2"
-set inputbar-fg "#282828"
-
-set notification-error-bg "#fb4934"
-set notification-error-fg "#151515"
-
-set notification-warning-bg "#fb4934"
-set notification-warning-fg "#151515"
-
-set highlight-color "#fabd2f"
-set highlight-active-color "#458588"
-
-set completion-highlight-fg "#151515"
-set completion-highlight-bg "#98971a"
-
-set completion-bg "#282828"
-set completion-fg "#EBDBB2"
-
-set notification-bg "#d79921"
-set notification-fg "#282828"
-
-set recolor-lightcolor rgba(40,40,40,0.0)
-set recolor-darkcolor "#EBDBB2"
-## END THEME
-
+# No unexpected quitting
+unmap q
+unmap <C-q>

@@ -5,6 +5,21 @@ set theme (echo -e "catppuccin\ngruvbox\ngruvbox_light\ndracula\nmonokai\nnord\n
 if test $theme = "catppuccin"
     alacritty-themes Catppuccin
     sed -i 's/0x1E1D2F/0x1E1E2E/g' ~/.config/alacritty/alacritty.yml
+    set wezterm "catppuccin"
+    set color_bat "base16-256"
+    set gtk_theme_name "Catppuccin-pink"
+    set gtk_icon_theme_name "Adwaita"
+    set gtk_cursor_theme_name "Breeze_Snow"
+    set wallpaper "landscapes\/shaded_landscape.png"
+    set vscode "Catppuccin"
+    set ohmyrepl "JuliaDefault"
+    set luakit "dracula"
+    set dmenu '-nb "#161320" -nf "#D9E0EE" -sb "#F5C2E7" -sf "#161320"'
+    set -Ux DMENU_ARGS -fn "JuliaMono-12" -nb "#161320" -nf "#D9E0EE" -sb "#F5C2E7" -sf "#161320"
+else if test $theme = "catppuccin_latte"
+    alacritty-themes Catppuccin
+    sed -i 's/0x1E1D2F/0x1E1E2E/g' ~/.config/alacritty/alacritty.yml
+    set wezterm "catppuccin"
     set color_bat "base16-256"
     set gtk_theme_name "Catppuccin-pink"
     set gtk_icon_theme_name "Adwaita"
@@ -17,6 +32,7 @@ if test $theme = "catppuccin"
     set -Ux DMENU_ARGS -fn "JuliaMono-12" -nb "#161320" -nf "#D9E0EE" -sb "#F5C2E7" -sf "#161320"
 else if test $theme = "dracula"
     alacritty-themes Dracula
+    set wezterm "dracula"
     sed -i 's/#000000/#282a36/g' ~/.config/alacritty/alacritty.yml
     set color_bat "Dracula"
     set gtk_theme_name "Dracula"
@@ -24,16 +40,17 @@ else if test $theme = "dracula"
     set gtk_cursor_theme_name "Breeze_Snow"
     set wallpaper "tromsø_pink2.jpg"
     set vscode "Dracula"
-    set ohmyrepl "JuliaDefault"
+    set ohmyrepl "Dracula"
     set luakit "dracula"
     set -Ux DMENU_ARGS -fn "JuliaMono-12" -nb "#16171d" -nf "#f8f8f2" -sb "#ff79c6" -sf "#16171d"
 else if test $theme = "gruvbox"
     alacritty-themes Gruvbox-Dark
+    set wezterm "gruvbox"
     set color_bat "gruvbox-dark"
     set gtk_theme_name "gruvbox-dark-gtk"
     set gtk_icon_theme_name "Gruvbox-Material-Dark"
     set gtk_cursor_theme_name "Breeze"
-    set wallpaper "hardanger_crop.jpg"
+    set wallpaper "paintings\/hardanger_crop.jpg"
     # set vscode "Gruvbox Dark Medium"
     set vscode "Gruvbox Material Dark"
     set ohmyrepl "GruvboxDark"
@@ -41,19 +58,22 @@ else if test $theme = "gruvbox"
     set -Ux DMENU_ARGS -fn "JuliaMono-12" -nb "#1d2021" -nf "#EBDBB2" -sb "#D3869B" -sf "#1d2021"
 else if test $theme = "gruvbox_light"
     alacritty-themes Gruvbox-Light
+    set wezterm "Gruvbox Light"
     set color_bat "gruvbox-light"
     set gtk_theme_name "gruvbox-dark-gtk"
     set gtk_icon_theme_name "Gruvbox-Material-Dark"
     set gtk_cursor_theme_name "Breeze"
-    set wallpaper "hardanger_crop.jpg"
+    set wallpaper "paintings\/hardanger_crop.jpg"
     # set vscode "Gruvbox Light Medium"
     set vscode "Gruvbox Material Light"
     set ohmyrepl "JuliaDefault"
     set luakit "gruvbox-light-medium"
-    set -Ux DMENU_ARGS -fn "JuliaMono-12" -nb "#f9f5d7" -nf "#3c3836" -sb "#8f3f71" -sf "#f9f5d7"
+    # set -Ux DMENU_ARGS -fn "JuliaMono-12" -nb "#f9f5d7" -nf "#3c3836" -sb "#8f3f71" -sf "#f9f5d7"
+    set -Ux DMENU_ARGS -fn "JuliaMono-12" -nb "#1d2021" -nf "#EBDBB2" -sb "#D3869B" -sf "#1d2021"
 else if test $theme = "monokai"
     alacritty-themes Monokai.dark
     # sed -i 's/#000000/#282a36/g' ~/.config/alacritty/alacritty.yml
+    set wezterm "monokai"
     set color_bat "Monokai Extended"
     set gtk_theme_name "monokai-gtk"
     set gtk_icon_theme_name "monokai-gtk"
@@ -66,18 +86,20 @@ else if test $theme = "monokai"
 else if test $theme = "nord"
     alacritty-themes Nord
     # sed -i 's/#000000/#282a36/g' ~/.config/alacritty/alacritty.yml
+    set wezterm "nord"
     set color_bat "Nord"
     set gtk_theme_name "Nordic"
     set gtk_icon_theme_name "Nordic"
     set gtk_cursor_theme_name "Breeze_Snow"
     set wallpaper "fjell.jpg"
     set vscode "Nord"
-    set ohmyrepl "JuliaDefault"
+    set ohmyrepl "Nord"
     set luakit "nord"
-    set -Ux DMENU_ARGS -fn "JuliaMono-12" -nb "#2E3440" -nf "#ECEFF4" -sb "#B48EAD" -sf "#2E3440"
+    set -Ux DMENU_ARGS -fn "JuliaMono-12" -nb "#222730" -nf "#ECEFF4" -sb "#B48EAD" -sf "#222730"
 else if test $theme = "one_dark"
     alacritty-themes One-Dark
     # sed -i 's/#000000/#282a36/g' ~/.config/alacritty/alacritty.yml
+    set wezterm "one_dark"
     set color_bat "OneHalfDark"
     set gtk_theme_name "AtomOneDarkTheme"
     set gtk_icon_theme_name "monokai-gtk"
@@ -98,19 +120,24 @@ ln -sf $theme.ini ~/.config/polybar/colors/colors.ini
 ln -sf themes/$theme.conf ~/.config/kitty/current-theme.conf
 ln -sf themes/$theme.css ~/.config/vimb/style.css
 ln -sf base16-luakit/themes/base16-$luakit.lua ~/.config/luakit/theme.lua
+sed -ri 's/^(\s*)color_scheme =(.*)$/\1color_scheme = "'(echo $wezterm)'",/g' ~/.config/wezterm/wezterm.lua
 sed -i 's/^--theme=.*/--theme="'(echo $color_bat)'"/g' ~/.config/bat/config 
 sed -i 's/^gtk-theme-name=.*/gtk-theme-name='(echo $gtk_theme_name)'/g' ~/.config/gtk-3.0/settings.ini
 sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name='(echo $gtk_icon_theme_name)'/g' ~/.config/gtk-3.0/settings.ini
 sed -i 's/^gtk-cursor-theme-name=.*/gtk-cursor-theme-name='(echo $gtk_cursor_theme_name)'/g' ~/.config/gtk-3.0/settings.ini
-sed -i 's/^\@import.*/@import "'(echo $theme)'.rasi"/g' ~/.config/rofi/config.rasi
+sed -i 's/^\@theme.*/@theme "'(echo $theme)'"/g' ~/.config/rofi/config.rasi
 sed -i 's/^dirs=.*/dirs=\/home\/syver\/Pictures\/wallpapers\/'(echo $theme)';/g' ~/.config/nitrogen/nitrogen.cfg
 sed -i 's/^file=.*/file=\/home\/syver\/Pictures\/wallpapers\/'(echo $theme)'\/'(echo $wallpaper)'/g' ~/.config/nitrogen/bg-saved.cfg
+sed -i 's/^include .*/include themes\/'(echo $theme)'/g' ~/.config/zathura/zathurarc
+sed -i 's/^source .*/source ~\/.config\/tmux\/themes\/'(echo $theme).conf'/g' ~/.config/tmux/tmux.conf
+
 sed -i 's/"workbench\.colorTheme": ".*",/"workbench\.colorTheme": "'(echo $vscode)'",/g' ~/.config/Code/User/settings.json
 sed -i 's/^colorscheme!(".*/colorscheme!("'(echo $ohmyrepl)'")/g' ~/.julia/config/startup.jl
 
 sed -i -e '/## BEGIN THEME/,/## END THEME/{/^##/!d}' -e '/## BEGIN THEME.*$/r /home/syver/.config/vimb/themes/'(echo $theme) ~/.config/vimb/config
 sed -i -e '/## BEGIN THEME/,/## END THEME/{/^##/!d}' -e '/## BEGIN THEME.*$/r /home/syver/.config/dunst/themes/'(echo $theme) ~/.config/dunst/dunstrc
-sed -i -e '/## BEGIN THEME/,/## END THEME/{/^##/!d}' -e '/## BEGIN THEME.*$/r /home/syver/.config/zathura/themes/'(echo $theme) ~/.config/zathura/zathurarc
+
+
 sed -i -e '/;; BEGIN THEME/,/;; END THEME/{/^;;/!d}' -e '/;; BEGIN THEME.*$/r /home/syver/delta_themes/'(echo $theme) ~/.gitconfig
 
 leftwm-command "SoftReload"

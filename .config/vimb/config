@@ -10,7 +10,7 @@ set smooth-scrolling=on
 set incsearch=true
 set monospace-font=JuliaMono
 # set monospace-font-size=13
-set dark-mode=off
+set dark-mode=on
 
 # # SSL
 # set strict-ssl=false

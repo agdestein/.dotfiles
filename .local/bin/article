@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# source: https://gist.githubusercontent.com/gillescastel/7e8a0dc54f62182acde62503b2e8f1d7/raw/1e52262c394f142d5a9b93d0f37cb0de3a0e56d1/shortcut.sh
+
+cd /home/syver/articles 
+
+pdf_file="$(ls . | rofi -i -dmenu)";
+[ -z "$pdf_file" ] && exit 0;
+[ -f "$pdf_file" ] && zathura "$(realpath "$pdf_file")" || handlr open "https://google.com/search?q=$pdf_file" 

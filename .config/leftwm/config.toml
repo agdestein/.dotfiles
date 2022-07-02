@@ -78,27 +78,41 @@ keybind = [
     {command = "ToggleSticky", modifier = ["modkey"], key = "y"},
     {command = "ToggleFloating", modifier = ["modkey", "Shift"], key = "space"},
     {command = "CloseWindow", modifier = ["modkey", "Shift"], key = "c"},
-    {command = "ToggleScratchPad", value = "Browser", modifier = ["modkey"], key = "v"},
+    {command = "ToggleScratchPad", value = "Vimb", modifier = ["modkey"], key = "v"},
+    # {command = "ToggleScratchPad", value = "Qutebrowser", modifier = ["modkey"], key = "q"},
     {command = "ToggleScratchPad", value = "alacritty", modifier = ["modkey", "Shift"], key = "a"},
     {command = "ToggleScratchPad", value = "htop", modifier = ["modkey"], key = "z"},
-    {command = "ToggleScratchPad", value = "bottom", modifier = ["modkey"], key = "q"},
+    {command = "ToggleScratchPad", value = "tty-clock", modifier = ["modkey"], key = "c"},
     {command = "Execute", value = "/home/syver/.local/bin/hardanger", modifier = ["modkey"], key = "r"},
-    {command = "Execute", value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e /home/syver/.local/bin/dot", modifier = ["modkey", "Shift"], key = "d"},
+    {command = "Execute", value = "wezterm start /home/syver/.local/bin/dot", modifier = ["modkey", "Shift"], key = "d"},
     {command = "Execute", value = "/home/syver/.local/bin/screenlayout", modifier = ["modkey", "Shift"], key = "n"},
-    {command = "Execute", value = "/home/syver/.local/bin/keyboardmenu", modifier = ["modkey"], key = "g"},
-    {command = "Execute", value = "/home/syver/.local/bin/run_dmenu_run", modifier = ["modkey"], key = "p"},
+    {command = "Execute", value = "rofi -show run", modifier = ["modkey"], key = "p"},
+    # {command = "Execute", value = "/home/syver/.local/bin/run_dmenu_run", modifier = ["modkey"], key = "p"},
     {command = "Execute", value = "/home/syver/.local/bin/run_clipmenu", modifier = ["modkey"], key = "i"},
+    {command = "Execute", value = "/home/syver/.local/bin/keyboardmenu", modifier = ["modkey"], key = "g"},
+    {command = "Execute", value = "setxkbmap us",                       modifier = ["modkey", "Control"], key = "1"},
+    {command = "Execute", value = "setxkbmap no",                       modifier = ["modkey", "Control"], key = "2"},
+    {command = "Execute", value = "setxkbmap fr",                       modifier = ["modkey", "Control"], key = "3"},
+    {command = "Execute", value = "setxkbmap ru",                       modifier = ["modkey", "Control"], key = "4"},
+    {command = "Execute", value = "setxkbmap -layout us -variant intl", modifier = ["modkey", "Control"], key = "5"},
+    {command = "Execute", value = "setxkbmap us",                       modifier = ["modkey", "Control"], key = "ampersand"},
+    {command = "Execute", value = "setxkbmap no",                       modifier = ["modkey", "Control"], key = "eacute"},
+    {command = "Execute", value = "setxkbmap fr",                       modifier = ["modkey", "Control"], key = "quotedbl"},
+    {command = "Execute", value = "setxkbmap ru",                       modifier = ["modkey", "Control"], key = "apostrophe"},
+    {command = "Execute", value = "setxkbmap -layout us -variant intl", modifier = ["modkey", "Control"], key = "parenleft"},
     {command = "Execute", value = "emacs", modifier = ["modkey", "Shift"], key = "e"},
     {command = "Execute", value = "flameshot gui", modifier = ["modkey", "Shift"], key = "i"},
     {command = "Execute", value = "flameshot screen -c", modifier = [], key = "Print"},
-    {command = "Execute", value = "WINIT_X11_SCALE_FACTOR=1 alacritty", modifier = ["modkey", "Shift"], key = "Return"},
     {command = "Execute", value = "kitty", modifier = ["modkey", "Control", "Shift"], key = "Return"},
+    {command = "Execute", value = "wezterm", modifier = ["modkey", "Shift"], key = "Return"},
+    {command = "Execute", value = "WINIT_X11_SCALE_FACTOR=1 alacritty", modifier = ["modkey", "Control"], key = "Return"},
     {command = "Execute", value = "brave", modifier = ["modkey", "Shift"], key = "b"},
     {command = "Execute", value = "firefox", modifier = ["modkey", "Control", "Shift"], key = "f"},
     {command = "Execute", value = "vimb", modifier = ["modkey", "Shift"], key = "v"},
+    {command = "Execute", value = "qutebrowser", modifier = ["modkey", "Shift"], key = "q"},
     {command = "Execute", value = "luakit", modifier = ["modkey", "Shift"], key = "u"},
     {command = "Execute", value = "zathura", modifier = ["modkey", "Shift"], key = "z"},
-    {command = "Execute", value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e ranger", modifier = ["modkey"], key = "f"},
+    {command = "Execute", value = "wezterm start ranger", modifier = ["modkey"], key = "f"},
     {command = "Execute", value = "pcmanfm", modifier = ["modkey", "Shift"], key = "f"},
     {command = "Execute", value = "rofi -show emoji -modi emoji", modifier = ["modkey", "Control", "Shift"], key = "e"},
     # {command = "Execute", value = "slock", modifier = ["modkey", "Control"], key = "l"},
@@ -109,15 +123,25 @@ keybind = [
     {command = "Execute", value = "dunstctl context", modifier = ["modkey", "Shift"], key = "period"},
     {command = "Execute", value = "/home/syver/.local/bin/bgrand", modifier = ["modkey"], key = "b"},
     {command = "Execute", value = "/home/syver/.local/bin/setbgdir", modifier = ["modkey", "Control"], key = "b"},
+    {command = "Execute", value = "/home/syver/projects/instant-reference/copy-reference.js", modifier = ["modkey", "Shift"], key = "o"},
+    {command = "Execute", value = "/home/syver/.local/bin/article", modifier = ["modkey", "Shift"], key = "p"},
 ]
 
 [[scratchpad]]
-name = "Browser"
+name = "Vimb"
 value = "vimb"
 x = 0.2
 y = 0.1
 height = 0.8
 width = 0.6
+
+# [[scratchpad]]
+# name = "Qutebrowser"
+# value = "qutebrowser google.com --target window"
+# x = 0.2
+# y = 0.1
+# height = 0.8
+# width = 0.6
 
 [[scratchpad]]
 name = "alacritty"
@@ -129,6 +153,7 @@ width = 0.4
 
 [[scratchpad]]
 name = "htop"
+# value = "wezterm start htop"
 value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e htop"
 x = 0.2
 y = 0.15
@@ -136,9 +161,21 @@ height = 0.7
 width = 0.6
 
 [[scratchpad]]
-name = "bottom"
-value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e btm"
-x = 0.2
-y = 0.15
-height = 0.7
-width = 0.6
+name = "tty-clock"
+# value = "wezterm start htop"
+value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e tty-clock"
+x = 0.4
+y = 0.4
+height = 0.2
+width = 0.2
+
+# AZERTY
+# &	ampersand
+# é	eacute
+# "	quotedbl
+# '	apostrophe
+# (	parenleft
+# è	egrave
+# _	underscore
+# ç	ccedilla
+# à	agrave

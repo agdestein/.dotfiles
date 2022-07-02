@@ -22,13 +22,13 @@ leftwm-command "LoadTheme $SCRIPTPATH/theme.toml"
 # Set background
 nitrogen --restore
 
-# Boot a polybar for each monitor
-polybar -m | sed s/:.*// | tac | while read -r monitor
-do 
-    monitor=$monitor polybar main &> /dev/null &
-    # if [ "$monitor" == "DP3" ]; then
-    #     monitor=$monitor polybar smallbar &> /dev/null &
-    # else
-    #     monitor=$monitor polybar main &> /dev/null &
-    # fi
-done
+# # Boot a polybar for each monitor
+# polybar -m | sed s/:.*// | tac | while read -r monitor
+# do 
+#     monitor=$monitor polybar main &> /dev/null &
+#     # if [ "$monitor" == "DP3" ]; then
+#     #     monitor=$monitor polybar smallbar &> /dev/null &
+#     # else
+#     #     monitor=$monitor polybar main &> /dev/null &
+#     # fi
+# done

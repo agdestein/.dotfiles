@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-set f (echo -e "alacritty\nbat\ndot\ndunst\nfish\nhardanger\njulia_startup\njulia_v1.7\nkitty\nleftwm\nnvim\npicom\npolybar\nranger\nrofi\nscreenlayout\nstarship\ntmux\nvimb\nzathura" | rofi -dmenu -i)
+set f (echo -e "alacritty\nbat\ndot\ndunst\nfish\nhardanger\njulia_startup\njulia_v1.7\nkitty\nleftwm\nnvim\npicom\npolybar\nqutebrowser\nranger\nrofi\nscreenlayout\nstarship\ntmux\nvimb\nwezterm\nzathura" | rofi -dmenu -i)
 
 if test $f = "alacritty"
     nvim ~/.config/alacritty/alacritty.yml
@@ -28,6 +28,8 @@ else if test $f = "picom"
     nvim ~/.config/picom/picom.conf
 else if test $f = "polybar"
     nvim ~/.config/leftwm/themes/Hardanger/polybar/config.ini
+else if test $f = "qutebrowser"
+    nvim ~/.config/qutebrowser/config.py
 else if test $f = "ranger"
     nvim ~/.config/ranger/rc.conf
 else if test $f = "rofi"
@@ -40,6 +42,8 @@ else if test $f = "tmux"
     nvim ~/.config/tmux/tmux.conf
 else if test $f = "vimb"
     nvim ~/.config/vimb/config
+else if test $f = "wezterm"
+    nvim ~/.config/wezterm/wezterm.lua
 else if test $f = "zathura"
     nvim ~/.config/zathura/zathurarc
 end

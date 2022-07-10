@@ -27,7 +27,7 @@ set highlight-color             "#fabd2f" # Yellow
 set highlight-fg                "#504945" # Yellow
 set highlight-active-color      "#98971a" # Green
 
-# set default-bg rgba(40,42,54,0.8)         # Background
+# set default-bg rgba(40,40,40,0.8)         # Background
 set default-bg                  "#282828" # Background
 set default-fg                  "#ebdbb2" # Foreground
 

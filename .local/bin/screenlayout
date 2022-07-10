@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-set f (echo -e "adriaan\nlaptop\noffice_below\noffice_left\noffice_right\nring" | rofi -dmenu -i)
+set f (echo -e "adriaan\nlaptop\noffice" | rofi -dmenu -i)
 
 if test $f
     ~/.screenlayout/$f.sh

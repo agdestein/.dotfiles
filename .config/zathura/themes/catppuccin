@@ -1,6 +1,8 @@
 # Catppuccin
 set default-fg 			    "#D9E0EE"
 set default-bg 			    "#1E1E2E"
+# set default-bg 			    rgba(30,30,46,0.8)
+
 
 set completion-bg		    "#302D41"
 set completion-fg		    "#D9E0EE"
@@ -22,6 +24,7 @@ set notification-warning-fg	"#FAE3B0"
 set inputbar-fg			    "#D9E0EE"
 set inputbar-bg 		    "#302D41"
 
+# set recolor-lightcolor      rgba(30,30,46,0.0)
 set recolor-lightcolor		"#1E1E2E"
 set recolor-darkcolor		"#D9E0EE"
 
@@ -30,7 +33,7 @@ set index-bg			    "#1E1E2E"
 set index-active-fg		    "#D9E0EE"
 set index-active-bg		    "#302D41"
 
-set render-loading              true
+set render-loading          true
 set render-loading-bg		"#1E1E2E"
 set render-loading-fg		"#D9E0EE"
 

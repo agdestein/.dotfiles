@@ -13,7 +13,7 @@ font:
     # family: FiraCode
     # family: FiraCode Nerd Font Mono
     # family: FuraCode Nerd Font # Mono
-  size: 13
+  size: 14
 
 window:
   # opacity: 0.80

@@ -163,11 +163,11 @@ width = 0.6
 [[scratchpad]]
 name = "tty-clock"
 # value = "wezterm start htop"
-value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e tty-clock"
-x = 0.4
+value = "WINIT_X11_SCALE_FACTOR=1 alacritty -e tty-clock -cs"
+x = 0.35
 y = 0.4
 height = 0.2
-width = 0.2
+width = 0.25
 
 # AZERTY
 # &	ampersand

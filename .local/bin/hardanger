@@ -7,10 +7,10 @@ if test $theme = "catppuccin"
     sed -i 's/0x1E1D2F/0x1E1E2E/g' ~/.config/alacritty/alacritty.yml
     set wezterm "catppuccin"
     set color_bat "base16-256"
-    set gtk_theme_name "Catppuccin-pink"
+    set gtk_theme_name "Catppuccin"
     set gtk_icon_theme_name "Adwaita"
     set gtk_cursor_theme_name "Breeze_Snow"
-    set wallpaper "landscapes\/shaded_landscape.png"
+    set wallpaper "landscapes\/Clearday.jpg"
     set vscode "Catppuccin"
     set ohmyrepl "JuliaDefault"
     set luakit "dracula"
@@ -24,7 +24,7 @@ else if test $theme = "catppuccin_latte"
     set gtk_theme_name "Catppuccin-pink"
     set gtk_icon_theme_name "Adwaita"
     set gtk_cursor_theme_name "Breeze_Snow"
-    set wallpaper "landscapes\/shaded_landscape.png"
+    set wallpaper "landscapes\/Clearnight.jpg"
     set vscode "Catppuccin"
     set ohmyrepl "JuliaDefault"
     set luakit "dracula"
@@ -125,7 +125,7 @@ sed -i 's/^--theme=.*/--theme="'(echo $color_bat)'"/g' ~/.config/bat/config
 sed -i 's/^gtk-theme-name=.*/gtk-theme-name='(echo $gtk_theme_name)'/g' ~/.config/gtk-3.0/settings.ini
 sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name='(echo $gtk_icon_theme_name)'/g' ~/.config/gtk-3.0/settings.ini
 sed -i 's/^gtk-cursor-theme-name=.*/gtk-cursor-theme-name='(echo $gtk_cursor_theme_name)'/g' ~/.config/gtk-3.0/settings.ini
-sed -i 's/^\@theme.*/@theme "'(echo $theme)'"/g' ~/.config/rofi/config.rasi
+sed -i 's/^\@theme.*/@theme "themes\/'(echo $theme)'"/g' ~/.config/rofi/config.rasi
 sed -i 's/^dirs=.*/dirs=\/home\/syver\/Pictures\/wallpapers\/'(echo $theme)';/g' ~/.config/nitrogen/nitrogen.cfg
 sed -i 's/^file=.*/file=\/home\/syver\/Pictures\/wallpapers\/'(echo $theme)'\/'(echo $wallpaper)'/g' ~/.config/nitrogen/bg-saved.cfg
 sed -i 's/^include .*/include themes\/'(echo $theme)'/g' ~/.config/zathura/zathurarc

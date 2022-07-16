@@ -1,4 +1,4 @@
-[https://gist.github.com/r-malon/8fc669332215c8028697a0bbfbfbb32a]`https://gist.github.com/r-malon/8fc669332215c8028697a0bbfbfbb32a`
+<https://gist.github.com/r-malon/8fc669332215c8028697a0bbfbfbb32a>
 
 Palette      | Hex       | RGB           | HSL
 ---          | ---       | ---           | ---

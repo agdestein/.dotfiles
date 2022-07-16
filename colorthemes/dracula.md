@@ -1,4 +1,4 @@
-[https://github.com/dracula/dracula-theme/](https://github.com/dracula/dracula-theme/)
+<https://github.com/dracula/dracula-theme/>
 
 Palette      | Hex       | RGB           | HSL
 ---          | ---       | ---           | ---

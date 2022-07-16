@@ -27,7 +27,6 @@ zoxide init fish | source
 starship init fish | source
 
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
-alias smacritty="WINIT_X11_SCALE_FACTOR=1 alacritty"
 alias pluto="julia --project=~/.julia/environments/pluto -e 'using Pluto; Pluto.run()'"
 alias l="exa -a"
 alias ll="exa -lah"

@@ -577,7 +577,7 @@ c.colors.webpage.darkmode.enabled = False
 ##   - auto: Use the system-wide color scheme setting.
 ##   - light: Force a light theme.
 ##   - dark: Force a dark theme.
-c.colors.webpage.preferred_color_scheme = 'dark'
+c.colors.webpage.preferred_color_scheme = "dark"
 
 ## Number of commands to save in the command history. 0: no history / -1:
 ## unlimited
@@ -732,7 +732,7 @@ c.content.blocking.enabled = True
 ##   - adblock: Use Brave's ABP-style adblocker
 ##   - hosts: Use hosts blocking
 ##   - both: Use both hosts blocking and Brave's ABP-style adblocker
-c.content.blocking.method = 'both'
+c.content.blocking.method = "both"
 
 ## A list of patterns that should always be loaded, despite being blocked
 ## by the ad-/host-blocker. Local domains are always exempt from
@@ -1273,14 +1273,14 @@ c.content.blocking.method = 'both'
 ## font setting, it's replaced with the fonts listed here. If set to an
 ## empty value, a system-specific monospace default is used.
 ## Type: List of Font, or Font
-# c.fonts.default_family = []
+c.fonts.default_family = ["JuliaMono"]
 
 ## Default font size to use. Whenever "default_size" is used in a font
 ## setting, it's replaced with the size listed here. Valid values are
 ## either a float value with a "pt" suffix, or an integer value with a
 ## "px" suffix.
 ## Type: String
-# c.fonts.default_size = '10pt'
+c.fonts.default_size = "14pt"
 
 ## Font used for the downloadbar.
 ## Type: Font
@@ -2102,7 +2102,7 @@ c.tabs.title.alignment = "center"
 ## Type: List of FuzzyUrl, or FuzzyUrl
 c.url.start_pages = [
     # 'https://start.duckduckgo.com',
-    'https://github.com',
+    "https://github.com",
 ]
 
 ## URL parameters to strip with `:yank url`.

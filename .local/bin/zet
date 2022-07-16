@@ -1,0 +1,35 @@
+#!/usr/bin/env julia
+#
+# Choose a zettel title. Open corresponding zettel or ask for creating a new
+# one if it does not exist.
+
+using Dates
+
+cd("/home/syver/zettels")
+
+zettels = readdir(".")
+titles = [open(readline, zet)[3:end] for zet ∈ zettels]
+
+out = Pipe()
+open(`rofi -i -dmenu`, "w", out) do io
+    for l in titles
+        println(io, l)
+    end
+end
+title = readline(out)
+
+if title ∈ titles
+    zet = zettels[findfirst(==(title), titles)]
+    run(`nvim $zet`)
+else
+    println("The zettel with title \"$title\" does not exist.")
+    println("Do you want to create it? [y]/n")
+    s = readline()
+    if s ∈ ("", "y")
+        zet = Dates.format(now(), "YYmmddHHMMSS") * ".md"
+        open(zet, "w") do io
+            println(io, "# " * title)
+        end
+        run(`nvim $zet`)
+    end
+end

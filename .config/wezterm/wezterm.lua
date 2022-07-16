@@ -3,7 +3,7 @@ return {
     -- window_background_opacity = 0.8,
     -- text_background_opacity = 0.8,
 	font = wezterm.font("JuliaMono"),
-	font_size = 14,
+	font_size = 15,
 	color_scheme = "gruvbox",
 	hide_tab_bar_if_only_one_tab = true,
 	window_padding = {

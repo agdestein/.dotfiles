@@ -1,6 +1,5 @@
 # Catppuccin
 
-
 ## Latte
 
 | Labels    | Hex     | RGG                | HSL                |
@@ -31,7 +30,6 @@
 | Base      | #eff1f5 | rgb(239, 241, 245) | hsl(220, 23%, 95%) |
 | Mantle    | #e6e9ef | rgb(230, 233, 239) | hsl(220, 22%, 92%) |
 | Crust     | #dce0e8 | rgb(220, 224, 232) | hsl(220, 21%, 89%) |
-
 
 ## Frappé
 
@@ -64,7 +62,6 @@
 | Mantle    | #292c3c | rgb(41, 44, 60)    | hsl(231, 19%, 20%) |
 | Crust     | #232634 | rgb(35, 38, 52)    | hsl(229, 20%, 17%) |
 
-
 ## Macchiato
 
 | Labels    | Hex     | RGG                | HSL                |
@@ -95,7 +92,6 @@
 | Base      | #24273a | rgb(36, 39, 58)    | hsl(232, 23%, 18%) |
 | Mantle    | #1e2030 | rgb(30, 32, 48)    | hsl(233, 23%, 15%) |
 | Crust     | #181926 | rgb(24, 25, 38)    | hsl(236, 23%, 12%) |
-
 
 ## Mocha
 
